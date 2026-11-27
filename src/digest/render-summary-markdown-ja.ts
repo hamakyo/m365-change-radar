@@ -12,6 +12,10 @@ import {
   type DigestPersonaSummary,
 } from './digest-bundle.js';
 
+export type SummaryMarkdownOptions = {
+  readonly maxInformationalRows?: number;
+};
+
 const STATE_PRIORITY: Readonly<Record<ImpactState, number>> = {
   ACTION_REQUIRED: 0,
   REVIEW_REQUIRED: 1,
@@ -163,7 +167,7 @@ const ACTION_KIND_LABEL_JA: Readonly<
   VALIDATE: '動作検証',
 };
 
-const MAX_INFORMATIONAL_ROWS = 10;
+const DEFAULT_MAX_INFORMATIONAL_ROWS = 10;
 
 function stripEmojis(text: string): string {
   return text.replace(/\p{Extended_Pictographic}/gu, '').replace(/\uFE0F/g, '');
@@ -184,10 +188,6 @@ function sanitizeHeadingTitle(value: string): string {
 
 function formatDateSlash(iso: string): string {
   return iso.slice(0, 10).replaceAll('-', '/');
-}
-
-function formatDateShortMonthDay(iso: string): string {
-  return iso.slice(5, 10).replaceAll('-', '/');
 }
 
 function formatPersonaLabel(personaId: string): string {
@@ -213,7 +213,7 @@ function sortPersonasForDisplay(
   });
 }
 
-type ZennItemMetadata = {
+type SummaryItemMetadata = {
   readonly roadmapUrl: string;
   readonly status: string;
   readonly releasePhases: string[];
@@ -235,7 +235,7 @@ function asStringArray(value: JsonValue | undefined): string[] {
   return value.filter((item): item is string => typeof item === 'string');
 }
 
-function extractItemMetadata(entry: DigestChangeEntry): ZennItemMetadata {
+function extractItemMetadata(entry: DigestChangeEntry): SummaryItemMetadata {
   const meta =
     typeof entry.changeEvent.sourceMetadata === 'object' &&
     entry.changeEvent.sourceMetadata !== null &&
@@ -304,7 +304,7 @@ function resolveOwnerDisplayForWorkload(
   return 'IT管理者';
 }
 
-function formatScheduleWindow(meta: ZennItemMetadata): string {
+function formatScheduleWindow(meta: SummaryItemMetadata): string {
   if (meta.previewDate !== null && meta.gaDate !== null) {
     return `Preview: ${meta.previewDate} / GA: ${meta.gaDate}`;
   }
@@ -377,7 +377,7 @@ export function translateSuggestedActionToJapanese(input: {
  */
 function buildTailoredCheckpointsJa(
   entry: DigestChangeEntry,
-  meta: ZennItemMetadata,
+  meta: SummaryItemMetadata,
   highestActionableState: 'ACTION_REQUIRED' | 'REVIEW_REQUIRED',
 ): string[] {
   const ev = entry.changeEvent;
@@ -620,9 +620,11 @@ function renderFeatureSectionJa(
   }
   lines.push('');
 
-  lines.push(':::details Microsoft 公開ロードマップ原文');
+  lines.push('<details>');
+  lines.push('<summary>Microsoft 公開ロードマップ原文</summary>');
+  lines.push('');
   lines.push(stripEmojis(ev.body));
-  lines.push(':::');
+  lines.push('</details>');
   lines.push('');
 
   return lines.join('\n');
@@ -644,14 +646,19 @@ function informationalSortRank(status: string): number {
 }
 
 /**
- * Render a concise, reader-facing Zenn tech article (`zenn-article-ja.md`) from
+ * Render a platform-neutral Japanese executive summary (`summary-ja.md`) from
  * a validated `DigestBundle`.
  */
-export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
+export function renderSummaryMarkdownJa(
+  bundleInput: DigestBundle,
+  options: SummaryMarkdownOptions = {},
+): string {
   const bundle = DigestBundleSchema.parse(bundleInput);
+  const maxInformationalRows =
+    options.maxInformationalRows ?? DEFAULT_MAX_INFORMATIONAL_ROWS;
   const orderedPersonas = sortPersonasForDisplay(bundle.personas);
-  const sinceSlash = formatDateSlash(bundle.window.since);
-  const untilShort = formatDateShortMonthDay(bundle.window.until);
+  const sinceIsoDate = bundle.window.since.slice(0, 10);
+  const untilIsoDate = bundle.window.until.slice(0, 10);
 
   const actionableEntries = bundle.entries
     .filter((entry) =>
@@ -681,18 +688,10 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
     );
   });
 
-  const title = `M365週次変更影響まとめ (${sinceSlash}-${untilShort}) 要確認${actionableEntries.length}件とGCC除外`;
-
   const lines: string[] = [];
-  lines.push('---');
-  lines.push(`title: '${title}'`);
-  lines.push("emoji: '📡'");
-  lines.push("type: 'tech'");
   lines.push(
-    "topics: ['microsoft365', 'entraid', 'intune', 'purview', '情シス']",
+    `# Microsoft 365 週次変更影響サマリー (${sinceIsoDate} - ${untilIsoDate})`,
   );
-  lines.push('published: false');
-  lines.push('---');
   lines.push('');
 
   lines.push(
@@ -700,7 +699,7 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
   );
   lines.push('');
   lines.push(
-    `公開ロードマップには、国内の一般企業テナントには展開されない米国政府機関向けクラウド専用（GCC / GCC High / DoD）の更新や未契約の Dynamics 365 系アイテムが多く混在しています。今週分では対象 ${bundle.summary.changeCount} 件から米国政府クラウド専用 **${bundle.summary.sovereignCloudExcludedCount} 件**を自動除外し、商用テナントの情シス担当者が確認すべき **${actionableEntries.length} 件**を抽出しました。`,
+    `公開ロードマップには、国内の一般企業テナントには展開されない米国政府機関向けクラウド専用（GCC / GCC High / DoD）の更新や未契約の Dynamics 365 系アイテムが多く混在しています。対象 ${bundle.summary.changeCount} 件から米国政府クラウド専用 **${bundle.summary.sovereignCloudExcludedCount} 件**を自動除外し、商用マルチテナント（Worldwide）の情シス担当者が確認すべき **${actionableEntries.length} 件**を抽出しました。`,
   );
   lines.push('');
 
@@ -757,7 +756,7 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
     lines.push('');
   } else {
     lines.push(
-      '以下の項目は、該当ペルソナでサービスの利用有無が未登録、または新設された製品タグが未定義のため保留とした変更です。自組織での利用実態を一度確認して有効・無効を確定させると、次週以降は要確認または対象外へ自動で振り分けられます。',
+      '以下の項目は、該当ペルソナでサービスの利用有無が未登録、または新設された製品タグが未定義のため保留とした変更です。自組織での利用実態を一度確認して有効・無効を確定させると、次回以降は要確認または対象外へ自動で振り分けられます。',
     );
     lines.push('');
     lines.push('| Feature ID | 状態 | タイトル | 確認が必要なペルソナと項目 |');
@@ -826,7 +825,7 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
     lines.push('');
   }
 
-  // Section 5: Compact Top-10 Informational Highlights
+  // Section 5: Compact Informational Highlights
   const allInformationalEntries = bundle.entries
     .filter(
       (entry) =>
@@ -848,7 +847,7 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
 
   const shownInformational = allInformationalEntries.slice(
     0,
-    MAX_INFORMATIONAL_ROWS,
+    maxInformationalRows,
   );
   const omittedInformationalCount =
     allInformationalEntries.length - shownInformational.length;
@@ -880,11 +879,11 @@ export function renderZennArticleMarkdownJa(bundleInput: DigestBundle): string {
     }
   }
 
-  // Section 6: Accurate Methodology Note (no premature public-OSS claim)
+  // Section 6: Methodology Note
   lines.push('## 評価方法について');
   lines.push('');
   lines.push(
-    `本記事の集計は、Microsoft 365 公開ロードマップ JSON API（更新基準日時: ${bundle.generatedAt.slice(0, 10)}）の取得データを、3 種類の合成テナント構成プロファイルおよび決定論的リスク・適用性ポリシー（\`${bundle.policyVersions.riskPolicyRulesVersion}\` / \`${bundle.policyVersions.tenantApplicabilityPolicyRulesVersion}\`）と照合して自動生成しています。外部 LLM API を介さないため、同一スナップショットと同一プロファイルからは常に同じ判定結果が再現されます。`,
+    `本レポートの集計は、Microsoft 365 公開ロードマップ JSON API（更新基準日時: ${bundle.generatedAt.slice(0, 10)}）の取得データを、3 種類の合成テナント構成プロファイルおよび決定論的リスク・適用性ポリシー（\`${bundle.policyVersions.riskPolicyRulesVersion}\` / \`${bundle.policyVersions.tenantApplicabilityPolicyRulesVersion}\`）と照合して自動生成しています。外部 LLM API を介さないため、同一スナップショットと同一プロファイルからは常に同じ判定結果が再現されます。`,
   );
 
   return `${lines.join('\n')}\n`;

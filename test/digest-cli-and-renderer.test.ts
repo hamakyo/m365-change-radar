@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest';
 import {
   DigestBundleSchema,
   parseDigestCliArgs,
+  renderSummaryMarkdownJa,
   runDigestCommand,
   type DigestBundle,
 } from '../src/index.js';
@@ -28,17 +29,6 @@ function assertMarkdownAntiPatternsClean(markdownBody: string): void {
     expect(EMOJI_PATTERN.test(heading)).toBe(false);
     expect(withoutCode.includes('、')).toBe(false);
   }
-}
-
-function splitZennFrontmatter(zennMarkdown: string): {
-  readonly frontmatter: string;
-  readonly body: string;
-} {
-  const match = /^---\n([\s\S]*?)\n---\n\n?([\s\S]*)$/.exec(zennMarkdown);
-  if (match?.[1] === undefined || match[2] === undefined) {
-    throw new Error('Missing or malformed Zenn YAML frontmatter');
-  }
-  return { frontmatter: match[1], body: match[2] };
 }
 
 describe('parseDigestCliArgs', () => {
@@ -80,8 +70,8 @@ describe('parseDigestCliArgs', () => {
   });
 });
 
-describe('runDigestCommand offline, mocked live, audit ledger, and Zenn renderer', () => {
-  it('produces all 5 impact states, excludes GCC/DoD-only items, and emits readable digest-ja.md and zenn-article-ja.md byte-deterministically', async () => {
+describe('runDigestCommand offline, mocked live, audit ledger, and summary renderer', () => {
+  it('produces all 5 impact states, excludes GCC/DoD-only items, and emits readable digest-ja.md and summary-ja.md byte-deterministically', async () => {
     const outDir1 = mkdtempSync(join(tmpdir(), 'digest-test-1-'));
     const outDir2 = mkdtempSync(join(tmpdir(), 'digest-test-2-'));
 
@@ -105,6 +95,25 @@ describe('runDigestCommand offline, mocked live, audit ledger, and Zenn renderer
       expect(res1.stderr).toBe('');
       expect(res2.exitCode).toBe(0);
 
+      const summaryJson1 = JSON.parse(res1.stdout) as Record<string, unknown>;
+      expect(summaryJson1.summaryMarkdownPath).toBe(
+        join(outDir1, 'summary-ja.md'),
+      );
+      expect(Object.keys(summaryJson1)).toEqual([
+        'generatedAt',
+        'mode',
+        'fetchedItemCount',
+        'selectedItemCount',
+        'sovereignCloudExcludedCount',
+        'personaCount',
+        'pairCount',
+        'stateCounts',
+        'actionCount',
+        'bundlePath',
+        'markdownPath',
+        'summaryMarkdownPath',
+      ]);
+
       const bundleText1 = readFileSync(
         join(outDir1, 'digest-bundle.json'),
         'utf8',
@@ -115,18 +124,12 @@ describe('runDigestCommand offline, mocked live, audit ledger, and Zenn renderer
       );
       const mdText1 = readFileSync(join(outDir1, 'digest-ja.md'), 'utf8');
       const mdText2 = readFileSync(join(outDir2, 'digest-ja.md'), 'utf8');
-      const zennText1 = readFileSync(
-        join(outDir1, 'zenn-article-ja.md'),
-        'utf8',
-      );
-      const zennText2 = readFileSync(
-        join(outDir2, 'zenn-article-ja.md'),
-        'utf8',
-      );
+      const summaryText1 = readFileSync(join(outDir1, 'summary-ja.md'), 'utf8');
+      const summaryText2 = readFileSync(join(outDir2, 'summary-ja.md'), 'utf8');
 
       expect(bundleText1).toBe(bundleText2);
       expect(mdText1).toBe(mdText2);
-      expect(zennText1).toBe(zennText2);
+      expect(summaryText1).toBe(summaryText2);
 
       const bundle: DigestBundle = DigestBundleSchema.parse(
         JSON.parse(bundleText1) as unknown,
@@ -168,33 +171,39 @@ describe('runDigestCommand offline, mocked live, audit ledger, and Zenn renderer
       expect(mdText1).not.toContain('any_of evaluated as MATCH:');
       expect(mdText1).not.toContain('Investigate "');
 
-      // Reader-facing Zenn article checks
-      const { frontmatter, body: zennBody } = splitZennFrontmatter(zennText1);
-      expect(frontmatter).toMatch(/type:\s*['"]tech['"]/);
-      expect(frontmatter).toContain('microsoft365');
-      expect(frontmatter).toContain('published: false');
-      const titleMatch = /^title:\s*['"]([^'"]+)['"]/m.exec(frontmatter);
-      expect(titleMatch?.[1]).toBeDefined();
-      expect((titleMatch?.[1] ?? '').length).toBeLessThanOrEqual(70);
+      // Platform-neutral executive summary checks (standard H1, HTML <details>, zero frontmatter or :::details)
+      expect(summaryText1).not.toMatch(/^---\n/);
+      expect(summaryText1).not.toContain(':::details');
+      expect(summaryText1).toMatch(
+        /^# Microsoft 365 週次変更影響サマリー \(\d{4}-\d{2}-\d{2} - \d{4}-\d{2}-\d{2}\)\n\n/,
+      );
+      expect(summaryText1).toContain(
+        '<details>\n<summary>Microsoft 公開ロードマップ原文</summary>\n\n',
+      );
+      expect(summaryText1).toContain('\n</details>\n');
 
-      // Zero emojis anywhere in Zenn body or headings, zero `、` in headings
-      assertMarkdownAntiPatternsClean(zennBody);
-      expect(EMOJI_PATTERN.test(zennBody)).toBe(false);
+      assertMarkdownAntiPatternsClean(summaryText1);
+      expect(EMOJI_PATTERN.test(summaryText1)).toBe(false);
 
-      // Collapsible English original blocks, single provenance disclaimer, clean Japanese labels
-      expect(zennBody).toContain(':::details Microsoft 公開ロードマップ原文');
       const disclaimerMatches =
-        zennBody.match(/Microsoft 公式の手順指示ではありません/g) ?? [];
+        summaryText1.match(/Microsoft 公式の手順指示ではありません/g) ?? [];
       expect(disclaimerMatches).toHaveLength(1);
-      expect(zennBody).not.toContain('information-governance-team');
-      expect(zennBody).not.toContain('services.purview_compliance');
-      expect(zennBody).not.toContain('OSS リポジトリ');
-      expect(zennBody).toContain('Microsoft Purview ポータル');
-      expect(zennBody).toContain('Microsoft Teams 管理センター');
-      expect(zennBody).toContain('40名 Teams+EXO最小構成');
-      expect(zennBody).toContain('150名 Business Premium+Intune標準構成');
-      expect(zennBody).toContain('600名 Hybrid E3+Purview/Viva構成');
-      expect(zennBody).toContain('529852');
+      expect(summaryText1).not.toContain('information-governance-team');
+      expect(summaryText1).not.toContain('services.purview_compliance');
+      expect(summaryText1).toContain('Microsoft Purview ポータル');
+      expect(summaryText1).toContain('Microsoft Teams 管理センター');
+      expect(summaryText1).toContain('40名 Teams+EXO最小構成');
+      expect(summaryText1).toContain('150名 Business Premium+Intune標準構成');
+      expect(summaryText1).toContain('600名 Hybrid E3+Purview/Viva構成');
+      expect(summaryText1).toContain('529852');
+
+      // SummaryMarkdownOptions custom row limit
+      const cappedSummary = renderSummaryMarkdownJa(bundle, {
+        maxInformationalRows: 1,
+      });
+      expect(cappedSummary).toContain(
+        'ほか 2 件の一般機能更新・計画変更も情報共有または対象外として集計済みです。',
+      );
     } finally {
       rmSync(outDir1, { recursive: true, force: true });
       rmSync(outDir2, { recursive: true, force: true });
@@ -287,6 +296,7 @@ describe('runDigestCommand offline, mocked live, audit ledger, and Zenn renderer
       expect(summary.selectedItemCount).toBe(11);
       expect(summary.sovereignCloudExcludedCount).toBe(1);
       expect(summary.personaCount).toBe(3);
+      expect(summary.summaryMarkdownPath).toBe(join(outDir, 'summary-ja.md'));
 
       const scratchDirs = readdirSync(projectRoot).filter((name) =>
         name.includes('-dist-'),

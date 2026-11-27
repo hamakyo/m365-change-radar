@@ -23,7 +23,7 @@ pnpm digest --input test/fixtures/microsoft-roadmap-snapshot.json --days 14 --ou
 
 - `digest-bundle.json`: 正規化済み `ChangeEvent`、版情報、`AnalysisRecord`、推奨アクションを含む検証済み JSON バンドル
 - `digest-ja.md`: ソース事実・テナント事実・ポリシー結論・証跡 ID を保持した技術監査台帳
-- `zenn-article-ja.md`: 組織規模別の影響比較と確認ポイントを整理した Zenn 技術記事ドラフト
+- `summary-ja.md`: 組織規模別の影響比較と確認ポイントを整理した概要サマリーレポート
 
 ## 処理パイプラインと 5 つの判定状態
 
@@ -33,7 +33,7 @@ Microsoft 365 公開ロードマップ (JSON API / RSS)
   -> RiskPolicy 評価 (高リスク下限ガードレール) + TenantApplicability 評価
   -> createImpactAnalysisRecord (決定論的判定 + 分類マージ)
   -> AnalysisRecord + SuggestedChangeActionResult
-  -> digest-bundle.json / digest-ja.md / zenn-article-ja.md
+  -> digest-bundle.json / digest-ja.md / summary-ja.md
 ```
 
 各変更 × テナントプロファイルの組み合わせは、互いに排他的な 5 状態のいずれかに分類されます。
@@ -54,7 +54,7 @@ Microsoft 365 公開ロードマップ (JSON API / RSS)
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | `src/domain/`                     | コアドメインスキーマ（Zod）、リスク評価器、テナント適用性評価器、証跡・アクション生成ランナー                |
 | `src/adapters/microsoft-roadmap/` | Microsoft 365 公開ロードマップ（JSON API / RSS 2.0）正規化アダプタ                                           |
-| `src/digest/`                     | 週次ダイジェスト実行パイプライン、監査台帳レンダラー、Zenn 記事レンダラー                                    |
+| `src/digest/`                     | 週次ダイジェスト実行パイプライン、監査台帳レンダラー、概要サマリーレンダラー                                 |
 | `src/providers/`                  | OpenAI Responses API（`gpt-5.4-mini` Structured Outputs）分類器アダプタ（手動検証用）                        |
 | `src/corpus/`                     | 合成ゴールデンコーパス検証器・評価ハーネス（50 変更 × 10 プロファイル / 65 ラベル）                          |
 | `policies/`                       | 本番用リスクポリシー（`risk-policy.json`）およびテナント適用性ポリシー（`tenant-applicability-policy.json`） |

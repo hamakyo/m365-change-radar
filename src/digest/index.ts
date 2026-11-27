@@ -32,6 +32,7 @@ export {
 } from './digest-cli.js';
 export { renderDigestMarkdownJa } from './render-digest-markdown-ja.js';
 export {
-  renderZennArticleMarkdownJa,
+  renderSummaryMarkdownJa,
   translateSuggestedActionToJapanese,
-} from './render-zenn-article-ja.js';
+  type SummaryMarkdownOptions,
+} from './render-summary-markdown-ja.js';

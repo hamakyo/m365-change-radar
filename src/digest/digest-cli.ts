@@ -28,7 +28,7 @@ import {
   type PersonaProfileInput,
 } from './digest-bundle.js';
 import { renderDigestMarkdownJa } from './render-digest-markdown-ja.js';
-import { renderZennArticleMarkdownJa } from './render-zenn-article-ja.js';
+import { renderSummaryMarkdownJa } from './render-summary-markdown-ja.js';
 
 export type DigestCommandResult = {
   readonly exitCode: 0 | 1;
@@ -76,7 +76,7 @@ Options:
   --days <n>                  Rolling lookback window in days (default: 7)
   --limit <n>                 Maximum changes to analyze (default: 50)
   --profiles <dir|paths>      Profile directory or comma-separated JSON paths (default: profiles)
-  --out-dir <dir>             Output directory for digest-bundle.json, digest-ja.md & zenn-article-ja.md (default: artifacts/digest)
+  --out-dir <dir>             Output directory for digest-bundle.json, digest-ja.md & summary-ja.md (default: artifacts/digest)
   --now <iso-timestamp>       Explicit offset-aware ISO 8601 reference timestamp
   --help, -h                  Show this usage message
 `;
@@ -339,17 +339,17 @@ export async function runDigestCommand(
     });
 
     const markdownJa = renderDigestMarkdownJa(bundle);
-    const zennArticleJa = renderZennArticleMarkdownJa(bundle);
+    const summaryMarkdownJa = renderSummaryMarkdownJa(bundle);
     const outDir = resolve(projectRoot, parsedArgs.outDirArg);
     mkdirSync(outDir, { recursive: true });
 
     const bundlePath = join(outDir, 'digest-bundle.json');
     const markdownPath = join(outDir, 'digest-ja.md');
-    const zennArticlePath = join(outDir, 'zenn-article-ja.md');
+    const summaryMarkdownPath = join(outDir, 'summary-ja.md');
 
     writeFileSync(bundlePath, `${JSON.stringify(bundle, null, 2)}\n`, 'utf8');
     writeFileSync(markdownPath, markdownJa, 'utf8');
-    writeFileSync(zennArticlePath, zennArticleJa, 'utf8');
+    writeFileSync(summaryMarkdownPath, summaryMarkdownJa, 'utf8');
 
     const stdoutSummary = JSON.stringify({
       generatedAt: bundle.generatedAt,
@@ -363,7 +363,7 @@ export async function runDigestCommand(
       actionCount: bundle.summary.actionCount,
       bundlePath,
       markdownPath,
-      zennArticlePath,
+      summaryMarkdownPath,
     });
 
     return {

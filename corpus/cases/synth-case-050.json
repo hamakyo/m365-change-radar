@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-050",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-045",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Viva ownership handoff is operational guidance without a normalized high-impact signal."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": ["viva", "ownership", "platform-difference"],
+  "evaluationTags": ["phase-1b", "informational", "owner-known"]
+}

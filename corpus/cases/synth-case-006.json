@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-006",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-005",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The security signal requires review even when profile ownership is sparse."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": ["security", "unknown-tenant-context"],
+  "evaluationTags": ["seed", "security", "minimal-profile"]
+}

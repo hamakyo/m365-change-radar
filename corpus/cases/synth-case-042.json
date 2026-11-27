@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-042",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-037",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Purview workflow guidance has no normalized high-impact signal, while its owner and maintenance context are known."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "purview-compliance",
+    "ownership",
+    "maintenance-window",
+    "platform-difference"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "owner-known"]
+}

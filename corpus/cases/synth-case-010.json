@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-010",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-007",
+  "tenantProfileFixtureId": "SYNTH-TENANT-005",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "A compliance-impact signal requires review of retention behavior."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["compliance", "high-severity"],
+  "evaluationTags": ["seed", "compliance", "regulated-context"]
+}

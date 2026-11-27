@@ -1,0 +1,24 @@
+{
+  "fixtureId": "SYNTH-MC-050",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-050",
+    "title": "Synthetic Microsoft 365 affected workload question",
+    "body": "Synthetic scenario only: the notice does not identify the affected workload, tenant capability, or responsible owner.",
+    "publishedAt": "2026-10-10T09:00:00Z",
+    "updatedAt": "2026-10-10T09:10:00Z",
+    "products": ["Synthetic Microsoft 365"],
+    "categories": ["needs-context", "operations"],
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "microsoft-365-unknown-context"
+    }
+  },
+  "coverageTags": [
+    "ambiguous-scope",
+    "unknown-tenant-context",
+    "unknown-signal"
+  ]
+}

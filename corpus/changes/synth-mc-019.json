@@ -1,0 +1,37 @@
+{
+  "fixtureId": "SYNTH-MC-019",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-019",
+    "title": "Synthetic SharePoint sharing control update",
+    "body": "Synthetic scenario only: a SharePoint sharing control behavior changes and requires security review across supported endpoints.",
+    "publishedAt": "2026-09-09T09:00:00Z",
+    "updatedAt": "2026-09-09T09:16:00Z",
+    "products": ["Synthetic SharePoint Online"],
+    "categories": ["content", "security"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact", "security"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "sharepoint-security"
+    }
+  },
+  "coverageTags": [
+    "security",
+    "high-severity",
+    "sharepoint-onedrive",
+    "platform-difference",
+    "endpoint-difference"
+  ]
+}

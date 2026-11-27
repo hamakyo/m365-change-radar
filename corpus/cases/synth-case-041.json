@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-041",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-036",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The Purview privacy control affects regulated audit data and needs review before user communication."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "privacy",
+    "high-severity",
+    "purview-compliance",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "privacy", "review", "regulated-tenant"]
+}

@@ -1,0 +1,264 @@
+{
+  "policyId": "synthetic-tenant-applicability",
+  "policyRulesVersion": "tenant-applicability-2026-08",
+  "description": "Maps synthetic product labels to inspectable tenant services.",
+  "rules": [
+    {
+      "ruleId": "synthetic-teams",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Teams"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "teams", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-exchange",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Exchange"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "exchange_online",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-sharepoint",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic SharePoint"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "sharepoint_online",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-intune",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Intune"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "intune", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-entra",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Entra"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "entra_id", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-entra-id",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Entra ID"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "entra_id", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-purview",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Purview"] },
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "synthetic_purview",
+            "equals": true
+          },
+          {
+            "section": "services",
+            "key": "purview_compliance",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-stream",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Stream"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "stream", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-workload",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Workload"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "synthetic_workload",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-exchange-online",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic Exchange Online"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "exchange_online",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-sharepoint-online",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic SharePoint Online"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "sharepoint_online",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-onedrive",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic OneDrive"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "sharepoint_online",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-defender-for-endpoint",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic Defender for Endpoint"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "defender_for_endpoint",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-purview-compliance",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic Purview Compliance"]
+      },
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "synthetic_purview",
+            "equals": true
+          },
+          {
+            "section": "services",
+            "key": "purview_compliance",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-power-platform",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic Power Platform"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "power_platform",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "synthetic-viva",
+      "enabled": true,
+      "selector": { "field": "products", "values": ["Synthetic Viva"] },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [{ "section": "services", "key": "viva", "equals": true }]
+      }
+    },
+    {
+      "ruleId": "synthetic-microsoft-365",
+      "enabled": true,
+      "selector": {
+        "field": "products",
+        "values": ["Synthetic Microsoft 365"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "microsoft_365",
+            "equals": true
+          }
+        ]
+      }
+    }
+  ]
+}

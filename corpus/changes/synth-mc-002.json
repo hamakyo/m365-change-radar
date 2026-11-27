@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-002",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-002",
+    "title": "Synthetic Exchange transport action deadline",
+    "body": "Synthetic scenario only: an administrator action is scheduled before a stated date.",
+    "publishedAt": "2026-08-02T09:00:00+00:00",
+    "updatedAt": "2026-08-02T09:30:00+00:00",
+    "products": ["Synthetic Exchange"],
+    "categories": ["messaging", "admin-impact"],
+    "severity": "critical",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": "2026-10-15T00:00:00Z",
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact", "security"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "admin-action-deadline"
+    }
+  },
+  "coverageTags": ["admin-deadline", "critical-severity", "security"]
+}

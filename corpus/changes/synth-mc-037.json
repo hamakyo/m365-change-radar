@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-037",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-037",
+    "title": "Synthetic Purview review window guidance",
+    "body": "Synthetic scenario only: a Purview review workflow changes without a high-impact source signal, so ownership and maintenance timing must be checked.",
+    "publishedAt": "2026-09-27T09:00:00Z",
+    "updatedAt": "2026-09-27T09:14:00Z",
+    "products": ["Synthetic Purview Compliance"],
+    "categories": ["information-governance", "operations"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "purview-ownership-window"
+    }
+  },
+  "coverageTags": [
+    "purview-compliance",
+    "ownership",
+    "maintenance-window",
+    "platform-difference"
+  ]
+}

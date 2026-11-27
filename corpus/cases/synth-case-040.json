@@ -1,0 +1,21 @@
+{
+  "caseId": "SYNTH-CASE-040",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-035",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The critical Purview retention change requires compliance-owner action within an approved window."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": [
+    "compliance",
+    "critical-severity",
+    "purview-compliance",
+    "ownership",
+    "maintenance-window"
+  ],
+  "evaluationTags": ["phase-1b", "compliance", "action", "regulated-tenant"]
+}

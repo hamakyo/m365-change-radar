@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-045",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-045",
+    "title": "Synthetic Viva learning owner handoff",
+    "body": "Synthetic scenario only: a Viva learning workflow changes without a high-impact source signal, so ownership and platform fit must be reviewed.",
+    "publishedAt": "2026-10-05T09:00:00Z",
+    "updatedAt": "2026-10-05T09:15:00Z",
+    "products": ["Synthetic Viva"],
+    "categories": ["employee-experience", "operations"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "viva-ownership"
+    }
+  },
+  "coverageTags": ["viva", "ownership", "platform-difference"]
+}

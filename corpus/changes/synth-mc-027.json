@@ -1,0 +1,37 @@
+{
+  "fixtureId": "SYNTH-MC-027",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-027",
+    "title": "Synthetic Entra passwordless enforcement update",
+    "body": "Synthetic scenario only: a passwordless sign-in enforcement behavior changes and needs identity-owner review.",
+    "publishedAt": "2026-09-17T09:00:00Z",
+    "updatedAt": "2026-09-17T09:19:00Z",
+    "products": ["Synthetic Entra ID"],
+    "categories": ["identity", "security"],
+    "severity": "critical",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact", "security"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "entra-passwordless-security"
+    }
+  },
+  "coverageTags": [
+    "security",
+    "critical-severity",
+    "entra-id",
+    "ownership",
+    "endpoint-difference"
+  ]
+}

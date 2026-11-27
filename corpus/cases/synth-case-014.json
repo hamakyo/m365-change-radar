@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-014",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-009",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "INSUFFICIENT_CONTEXT",
+    "reason": "The profile does not say whether the targeted service exists.",
+    "missingContext": ["services.stream"]
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": ["unknown-tenant-context", "tenant-variation"],
+  "evaluationTags": [
+    "seed",
+    "insufficient-context",
+    "same-change-different-tenant"
+  ]
+}

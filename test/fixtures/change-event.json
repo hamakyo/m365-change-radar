@@ -1,0 +1,25 @@
+{
+  "source": "microsoft-message-center",
+  "externalId": "MC123456",
+  "title": "Teams meeting policy update",
+  "body": "A change to meeting policy defaults is planned.",
+  "publishedAt": "2026-08-26T09:00:00Z",
+  "updatedAt": "2026-08-26T10:30:00+00:00",
+  "products": ["Microsoft Teams"],
+  "categories": ["collaboration", "admin-impact"],
+  "severity": null,
+  "signals": {
+    "isMajorChange": false,
+    "actionRequiredBy": null,
+    "hasAdminImpact": true,
+    "isRetirementOrDeprecation": false,
+    "hasSecurityImpact": false,
+    "hasPrivacyImpact": false,
+    "hasComplianceImpact": false,
+    "tags": []
+  },
+  "sourceMetadata": {
+    "messageType": "serviceAnnouncement",
+    "tags": ["policy", "teams"]
+  }
+}

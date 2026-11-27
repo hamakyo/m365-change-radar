@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "profileVersion": "jp-smb-m365-bp-intune-2026-11.2",
+  "organization": {
+    "employees": 150
+  },
+  "services": {
+    "microsoft_365": true,
+    "microsoft_365_apps": true,
+    "exchange_online": true,
+    "sharepoint_online": true,
+    "teams": true,
+    "entra_id": true,
+    "intune": true,
+    "defender_for_endpoint": true,
+    "defender_for_office_365": true,
+    "purview_compliance": true,
+    "power_platform": true,
+    "stream": true,
+    "microsoft_edge": true,
+    "viva": false,
+    "windows_365": false,
+    "dynamics_365": false
+  },
+  "environment": {
+    "cloud_worldwide_multi_tenant": true,
+    "cloud_gcc": false,
+    "cloud_gcc_high": false,
+    "cloud_dod": false,
+    "cloud_china_21vianet": false,
+    "windows": true,
+    "macos": false,
+    "ios": true,
+    "android": false
+  },
+  "capabilities": {
+    "conditional_access": true,
+    "autopilot": true,
+    "passwordless": false,
+    "byod": false,
+    "retention_labels": true
+  },
+  "ownership": {
+    "microsoft_365": "corporate-it-admin",
+    "exchange_online": "corporate-it-admin",
+    "sharepoint_online": "corporate-it-admin",
+    "teams": "corporate-it-admin",
+    "entra_id": "corporate-it-admin",
+    "intune": "endpoint-admin"
+  },
+  "changePolicy": {
+    "userImpactRequiresCommunication": true,
+    "securityChangesRequireReview": true,
+    "complianceChangesRequireReview": false,
+    "adminImpactRequiresReview": true
+  },
+  "maintenance": {
+    "allowedDays": ["saturday", "sunday"],
+    "timezone": "Asia/Tokyo"
+  }
+}

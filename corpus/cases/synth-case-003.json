@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-003",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-002",
+  "tenantProfileFixtureId": "SYNTH-TENANT-001",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "An administrator deadline and critical severity require action planning."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": ["admin-deadline", "critical-severity"],
+  "evaluationTags": ["seed", "deadline", "action"]
+}

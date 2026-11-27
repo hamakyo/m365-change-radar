@@ -1,0 +1,18 @@
+{
+  "caseId": "SYNTH-CASE-046",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-041",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Power Platform connector note describes browser and mobile differences without a high-impact signal."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "power-platform",
+    "platform-difference",
+    "endpoint-difference"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "platform-difference"]
+}

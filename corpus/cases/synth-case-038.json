@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-038",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-033",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "Conflicting Defender severity signals are source-unknown, so the safe policy requires human review."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "defender-security",
+    "contradictory-source-signals",
+    "ambiguous-scope",
+    "unknown-tenant-context"
+  ],
+  "evaluationTags": ["phase-1b", "insufficient-context", "contradictory"]
+}

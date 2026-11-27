@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-032",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-027",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "Critical Entra security behavior affects the regulated identity boundary and needs an owner-led response."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": ["security", "critical-severity", "entra-id", "ownership"],
+  "evaluationTags": ["phase-1b", "security", "action", "passwordless"]
+}

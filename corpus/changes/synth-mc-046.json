@@ -1,0 +1,26 @@
+{
+  "fixtureId": "SYNTH-MC-046",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-046",
+    "title": "Synthetic Viva workload scope question",
+    "body": "Synthetic scenario only: the notice names a Viva workload but does not establish whether it is enabled or which users are included.",
+    "publishedAt": "2026-10-06T09:00:00Z",
+    "updatedAt": "2026-10-06T09:11:00Z",
+    "products": ["Synthetic Viva"],
+    "categories": ["employee-experience", "needs-context"],
+    "severity": null,
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "viva-ambiguous-scope"
+    }
+  },
+  "coverageTags": [
+    "viva",
+    "ambiguous-scope",
+    "unknown-tenant-context",
+    "unknown-signal"
+  ]
+}

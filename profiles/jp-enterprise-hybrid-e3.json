@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "profileVersion": "jp-enterprise-hybrid-e3-2026-11.2",
+  "organization": {
+    "employees": 600
+  },
+  "services": {
+    "microsoft_365": true,
+    "microsoft_365_apps": true,
+    "exchange_online": true,
+    "sharepoint_online": true,
+    "teams": true,
+    "entra_id": true,
+    "intune": true,
+    "defender_for_endpoint": true,
+    "defender_for_office_365": true,
+    "purview_compliance": true,
+    "power_platform": true,
+    "viva": true,
+    "m365_copilot": true,
+    "stream": true,
+    "microsoft_edge": true,
+    "windows_365": false,
+    "dynamics_365": false
+  },
+  "environment": {
+    "cloud_worldwide_multi_tenant": true,
+    "cloud_gcc": false,
+    "cloud_gcc_high": false,
+    "cloud_dod": false,
+    "cloud_china_21vianet": false,
+    "windows": true,
+    "macos": true,
+    "ios": true,
+    "android": true,
+    "hybrid_identity": true,
+    "hybrid_exchange": true
+  },
+  "capabilities": {
+    "conditional_access": true,
+    "autopilot": true,
+    "passwordless": true,
+    "byod": false,
+    "retention_labels": true,
+    "hybrid_entra_connect": true
+  },
+  "ownership": {
+    "entra_id": "identity-security-team",
+    "exchange_online": "messaging-ops-team",
+    "sharepoint_online": "collaboration-ops-team",
+    "teams": "collaboration-ops-team",
+    "intune": "client-engineering-team",
+    "purview_compliance": "information-governance-team",
+    "defender_for_endpoint": "soc-team",
+    "defender_for_office_365": "soc-team",
+    "power_platform": "citizen-dev-governance-team"
+  },
+  "changePolicy": {
+    "userImpactRequiresCommunication": true,
+    "securityChangesRequireReview": true,
+    "complianceChangesRequireReview": true,
+    "privacyChangesRequireReview": true,
+    "adminImpactRequiresReview": true
+  },
+  "maintenance": {
+    "allowedDays": ["saturday"],
+    "timezone": "Asia/Tokyo"
+  }
+}

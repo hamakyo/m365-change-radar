@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-011",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-008",
+  "tenantProfileFixtureId": "SYNTH-TENANT-001",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The cosmetic announcement has no normalized high-impact signal."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["informational", "confirmed-absence"],
+  "evaluationTags": ["seed", "informational", "known-absence"]
+}

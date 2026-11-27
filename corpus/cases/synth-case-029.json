@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-029",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-024",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Intune enrollment note is a platform-specific guidance item without a high-impact signal."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "intune",
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "macos"]
+}

@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-021",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-021",
+    "title": "Synthetic SharePoint sync client platform note",
+    "body": "Synthetic scenario only: a SharePoint sync behavior differs between desktop and mobile endpoints without a stated high-impact signal.",
+    "publishedAt": "2026-09-11T09:00:00Z",
+    "updatedAt": "2026-09-11T09:11:00Z",
+    "products": ["Synthetic SharePoint Online", "Synthetic OneDrive"],
+    "categories": ["content", "platform-difference"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "sharepoint-platform-difference"
+    }
+  },
+  "coverageTags": [
+    "sharepoint-onedrive",
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-004",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-002",
+  "tenantProfileFixtureId": "SYNTH-TENANT-002",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The deadline is actionable regardless of the tenant's other services."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": ["admin-deadline", "tenant-variation"],
+  "evaluationTags": ["seed", "deadline", "same-change-different-tenant"]
+}

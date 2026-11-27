@@ -1,0 +1,37 @@
+{
+  "fixtureId": "SYNTH-MC-017",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-017",
+    "title": "Synthetic Exchange recipient scope conflict",
+    "body": "Synthetic scenario only: one part of the notice says all recipients are affected while another says only a pilot group is affected.",
+    "publishedAt": "2026-09-07T09:00:00Z",
+    "updatedAt": "2026-09-07T09:18:00Z",
+    "products": ["Synthetic Exchange Online"],
+    "categories": ["messaging", "needs-context"],
+    "severity": null,
+    "signals": {
+      "hasAdminImpact": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "exchange-contradictory-scope",
+      "conflictingClaims": [
+        { "field": "scope", "value": "all-recipients" },
+        { "field": "scope", "value": "pilot-only" }
+      ]
+    }
+  },
+  "coverageTags": [
+    "exchange-online",
+    "contradictory-source-signals",
+    "ambiguous-scope",
+    "unknown-signal"
+  ]
+}

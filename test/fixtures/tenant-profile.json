@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "profileVersion": "2026-08-26.1",
+  "organization": {
+    "employees": 120
+  },
+  "services": {
+    "microsoft_365": true,
+    "exchange_online": true,
+    "sharepoint_online": true,
+    "teams": true,
+    "entra_id": true,
+    "intune": true,
+    "defender_for_endpoint": false
+  },
+  "environment": {
+    "windows": true,
+    "macos": false,
+    "ios": true,
+    "android": true
+  },
+  "capabilities": {
+    "conditional_access": true,
+    "autopilot": true,
+    "passwordless": false,
+    "byod": false
+  },
+  "ownership": {
+    "intune": "endpoint-team",
+    "exchange_online": "messaging-team"
+  },
+  "changePolicy": {
+    "userImpactRequiresCommunication": true,
+    "securityChangesRequireReview": true
+  },
+  "maintenance": {
+    "allowedDays": ["saturday"],
+    "timezone": "Asia/Tokyo"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-054",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-049",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The cross-service administration deadline requires an owned plan and maintenance-window scheduling."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "admin-deadline",
+    "high-severity",
+    "ownership",
+    "maintenance-window"
+  ],
+  "evaluationTags": ["phase-1b", "deadline", "action", "cross-service"]
+}

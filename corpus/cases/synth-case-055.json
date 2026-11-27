@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-055",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-050",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The affected workload signal is unknown, so the safe policy requires review instead of treating it as tenant-only absence."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "ambiguous-scope",
+    "unknown-tenant-context",
+    "unknown-signal"
+  ],
+  "evaluationTags": ["phase-1b", "insufficient-context", "missing-profile"]
+}

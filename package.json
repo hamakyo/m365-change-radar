@@ -1,0 +1,44 @@
+{
+  "name": "m365-change-radar",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Tenant-aware Microsoft 365 change impact analysis",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamakyo/m365-change-radar.git"
+  },
+  "homepage": "https://github.com/hamakyo/m365-change-radar#readme",
+  "bugs": {
+    "url": "https://github.com/hamakyo/m365-change-radar/issues"
+  },
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "analyze": "node scripts/run-analyze.mjs",
+    "digest": "node scripts/run-digest.mjs",
+    "provider:validate": "node --env-file-if-exists=.env.local scripts/run-openai-provider-validation.mjs",
+    "phase1:report": "node scripts/run-phase1-exit-gate-report.mjs",
+    "corpus:validate": "node scripts/run-corpus-validator.mjs",
+    "corpus:review": "node scripts/run-golden-label-review.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.18.0",
+    "eslint": "^10.0.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "zod": "^4.1.5"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-036",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-031",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "Critical Defender protection and administrator impact require an endpoint security response."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": [
+    "security",
+    "critical-severity",
+    "defender-security",
+    "endpoint-difference"
+  ],
+  "evaluationTags": ["phase-1b", "security", "action", "endpoint"]
+}

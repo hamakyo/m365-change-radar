@@ -1,0 +1,18 @@
+{
+  "caseId": "SYNTH-CASE-027",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-022",
+  "tenantProfileFixtureId": "SYNTH-TENANT-010",
+  "expected": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The legacy profile explicitly disables SharePoint Online, so the site template notice does not apply."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "sharepoint-onedrive",
+    "clearly-non-applicable",
+    "confirmed-absence"
+  ],
+  "evaluationTags": ["phase-1b", "non-applicable", "known-absence"]
+}

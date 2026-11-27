@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-049",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-049",
+    "title": "Synthetic Microsoft 365 administration deadline",
+    "body": "Synthetic scenario only: administrators must complete a cross-service configuration review before the synthetic deadline.",
+    "publishedAt": "2026-10-09T09:00:00Z",
+    "updatedAt": "2026-10-09T09:20:00Z",
+    "products": ["Synthetic Microsoft 365"],
+    "categories": ["administrator-action", "operations"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": "2026-12-01T00:00:00Z",
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "microsoft-365-admin-deadline"
+    }
+  },
+  "coverageTags": [
+    "admin-deadline",
+    "high-severity",
+    "ownership",
+    "maintenance-window"
+  ]
+}

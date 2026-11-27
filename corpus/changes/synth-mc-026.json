@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-026",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-026",
+    "title": "Synthetic Intune autopilot profile deprecation",
+    "body": "Synthetic scenario only: an Intune autopilot profile path is planned for deprecation and migration work must fit a maintenance window.",
+    "publishedAt": "2026-09-16T09:00:00Z",
+    "updatedAt": "2026-09-16T09:21:00Z",
+    "products": ["Synthetic Intune"],
+    "categories": ["endpoint-management", "platform-lifecycle"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": true,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["deprecation", "admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "intune-autopilot-deprecation"
+    }
+  },
+  "coverageTags": [
+    "deprecation",
+    "high-severity",
+    "intune",
+    "maintenance-window"
+  ]
+}

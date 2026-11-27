@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-048",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-043",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The Viva retirement requires review even though this regulated profile does not declare Viva usage."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["retirement", "high-severity", "viva", "user-communication"],
+  "evaluationTags": ["phase-1b", "retirement", "review", "missing-service"]
+}

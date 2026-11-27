@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-033",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-028",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The major conditional access rollout requires identity-owner review and a communication plan."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "entra-id",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "major", "review", "conditional-access"]
+}

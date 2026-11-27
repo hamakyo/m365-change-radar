@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-048",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-048",
+    "title": "Synthetic cross-service rollout scope conflict",
+    "body": "Synthetic scenario only: the notice alternates between a tenant-wide rollout and a selected service rollout, so the scope is unresolved.",
+    "publishedAt": "2026-10-08T09:00:00Z",
+    "updatedAt": "2026-10-08T09:16:00Z",
+    "products": ["Synthetic Microsoft 365"],
+    "categories": ["rollout", "needs-context"],
+    "severity": null,
+    "signals": {
+      "hasAdminImpact": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "microsoft-365-contradictory-scope",
+      "conflictingClaims": [
+        { "field": "rolloutScope", "value": "tenant-wide" },
+        { "field": "rolloutScope", "value": "selected-service" }
+      ]
+    }
+  },
+  "coverageTags": [
+    "contradictory-source-signals",
+    "ambiguous-scope",
+    "unknown-signal"
+  ]
+}

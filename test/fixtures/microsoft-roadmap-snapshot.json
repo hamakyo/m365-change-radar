@@ -1,0 +1,299 @@
+[
+  {
+    "id": 184915,
+    "title": "Microsoft Defender for Office 365: False positive email release from Quarantine through threat explorer and advanced hunting",
+    "description": "<p>SecOps and admins can manage false positives and release quarantined messages directly from Threat Explorer, Advanced Hunting, and the Email entity page without switching portals.</p>",
+    "moreInfoLink": "https://learn.microsoft.com/en-us/defender-office-365/quarantine-admin-manage-messages-files",
+    "publicDisclosureAvailabilityDate": "November CY2026",
+    "publicPreviewDate": null,
+    "created": "2026-10-12T00:15:00",
+    "publicRoadmapStatus": "Include this month",
+    "status": "Launched",
+    "modified": "2026-11-25T01:58:21",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Defender for Office 365" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Defender for Office 365" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 581739,
+    "title": "Microsoft Purview: Information Protection - Sensitivity label inheritance for Teams meeting artifacts",
+    "description": "<p>Teams meeting artifacts, including recordings, transcripts, and Loop notes, can be configured by admins to automatically inherit the sensitivity label from the meeting.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "February CY2027",
+    "publicPreviewDate": "December CY2026",
+    "created": "2026-11-19T00:35:27",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-24T00:35:27",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Purview" },
+      { "tagName": "General Availability" },
+      { "tagName": "Preview" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Purview" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [
+        { "tagName": "General Availability" },
+        { "tagName": "Preview" }
+      ],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 573701,
+    "title": "Microsoft Purview: Data Lifecycle Management - Graph API support for Archive Mailboxes as EWS APIs are deprecated",
+    "description": "<p>Access to Archive mailboxes through Microsoft Graph gives a unified archive view across main and auxiliary mailboxes while legacy EWS archive APIs are deprecated.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "December CY2026",
+    "publicPreviewDate": "",
+    "created": "2026-11-10T00:10:00",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-23T08:00:00",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Purview" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Purview" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 580451,
+    "title": "Microsoft Teams: Configure a list of allowed external meeting notetaker bots for your Teams meetings",
+    "description": "<p>Admins will be able to configure granular controls in Teams Admin Center for managing external meeting bots and their access to meetings hosted in their organization.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "January CY2027",
+    "publicPreviewDate": null,
+    "created": "2026-11-18T00:00:00",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-22T23:20:27",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "GCC" },
+      { "tagName": "Web" },
+      { "tagName": "Desktop" },
+      { "tagName": "Microsoft Teams" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Teams" }],
+      "cloudInstances": [
+        { "tagName": "Worldwide (Standard Multi-Tenant)" },
+        { "tagName": "GCC" }
+      ],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }, { "tagName": "Desktop" }]
+    }
+  },
+  {
+    "id": 590102,
+    "title": "Microsoft Intune: Device compliance script scheduling in Intune admin center",
+    "description": "<p>Admins can configure recurring compliance discovery scripts for Windows and iOS devices in the Microsoft Intune admin center.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "January CY2027",
+    "publicPreviewDate": "December CY2026",
+    "created": "2026-11-15T00:00:00",
+    "publicRoadmapStatus": "Include this month",
+    "status": "Rolling out",
+    "modified": "2026-11-22T12:00:00",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Microsoft Intune" },
+      { "tagName": "General Availability" },
+      { "tagName": "Preview" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Intune" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [
+        { "tagName": "General Availability" },
+        { "tagName": "Preview" }
+      ],
+      "platforms": [{ "tagName": "Desktop" }, { "tagName": "iOS" }]
+    }
+  },
+  {
+    "id": 580886,
+    "title": "Microsoft Teams: Open and collaborate on Pages in Teams",
+    "description": "<p>When someone shares a page in chat or a channel, users can open it in Teams, edit, and discuss with teammates with no administrator action required.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "January CY2027",
+    "publicPreviewDate": "December CY2026",
+    "created": "2026-11-20T00:16:54",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-26T00:16:54",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Teams" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Teams" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 580889,
+    "title": "Microsoft Copilot (Microsoft 365): Personalized work pattern memory in Office apps",
+    "description": "<p>Copilot in Word, Excel, and PowerPoint uses memory to personalize responses based on user work patterns.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "February CY2027",
+    "publicPreviewDate": null,
+    "created": "2026-11-18T00:13:11",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-24T00:13:11",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Copilot (Microsoft 365)" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Copilot (Microsoft 365)" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 579194,
+    "title": "Microsoft Purview: Recurring classifier refresh",
+    "description": "<p>Evolves on-demand classification into recurring classification refreshes so content classification stays current as context changes.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "March CY2027",
+    "publicPreviewDate": null,
+    "created": "2026-11-17T19:05:12",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-21T19:05:12",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Purview" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Purview" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 570869,
+    "title": "Work IQ: Dynamic skills",
+    "description": "<p>Enables agents to select and use relevant skills dynamically for each request.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "March CY2027",
+    "publicPreviewDate": "December CY2026",
+    "created": "2026-11-17T20:22:13",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-20T20:22:13",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Work IQ" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Work IQ" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 581794,
+    "title": "Dynamics 365 Finance: Customer Transaction Form Enhancement",
+    "description": "<p>Redesigning the Customer transaction form to improve performance and include multiledger support.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "March CY2027",
+    "publicPreviewDate": "December CY2026",
+    "created": "2026-11-20T00:16:54",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-25T00:16:54",
+    "locale": null,
+    "tags": [
+      { "tagName": "Worldwide (Standard Multi-Tenant)" },
+      { "tagName": "Web" },
+      { "tagName": "Dynamics 365 Finance" },
+      { "tagName": "General Availability" },
+      { "tagName": "Preview" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Dynamics 365 Finance" }],
+      "cloudInstances": [{ "tagName": "Worldwide (Standard Multi-Tenant)" }],
+      "releasePhase": [
+        { "tagName": "General Availability" },
+        { "tagName": "Preview" }
+      ],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  },
+  {
+    "id": 529852,
+    "title": "Microsoft Purview: Communication Compliance - Alert improvements",
+    "description": "<p>Communication Compliance is improving policy alert customization. Admins will be able to customize alert frequency and audit log settings in GCC, GCC High, and DoD environments.</p>",
+    "moreInfoLink": null,
+    "publicDisclosureAvailabilityDate": "August CY2027",
+    "publicPreviewDate": null,
+    "created": "2025-12-02T00:16:00",
+    "publicRoadmapStatus": "Include this month",
+    "status": "In development",
+    "modified": "2026-11-25T10:00:00",
+    "locale": null,
+    "tags": [
+      { "tagName": "GCC" },
+      { "tagName": "GCC High" },
+      { "tagName": "DoD" },
+      { "tagName": "Web" },
+      { "tagName": "Microsoft Purview" },
+      { "tagName": "General Availability" }
+    ],
+    "tagsContainer": {
+      "products": [{ "tagName": "Microsoft Purview" }],
+      "cloudInstances": [
+        { "tagName": "GCC" },
+        { "tagName": "GCC High" },
+        { "tagName": "DoD" }
+      ],
+      "releasePhase": [{ "tagName": "General Availability" }],
+      "platforms": [{ "tagName": "Web" }]
+    }
+  }
+]

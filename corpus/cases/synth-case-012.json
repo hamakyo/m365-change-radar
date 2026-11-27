@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-012",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-008",
+  "tenantProfileFixtureId": "SYNTH-TENANT-002",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The same cosmetic announcement remains informational for this tenant."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["informational", "tenant-variation"],
+  "evaluationTags": ["seed", "informational", "same-change-different-tenant"]
+}

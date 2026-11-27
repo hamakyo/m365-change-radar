@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-013",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-009",
+  "tenantProfileFixtureId": "SYNTH-TENANT-004",
+  "expected": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The tenant explicitly confirms that the targeted service is disabled."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["clearly-non-applicable", "confirmed-absence"],
+  "evaluationTags": ["seed", "non-applicable", "known-absence"]
+}

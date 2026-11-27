@@ -1,0 +1,35 @@
+{
+  "fixtureId": "SYNTH-MC-042",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-042",
+    "title": "Synthetic Power Platform feature for disabled service",
+    "body": "Synthetic scenario only: a Power Platform feature notice targets a service that can be explicitly disabled in a tenant.",
+    "publishedAt": "2026-10-02T09:00:00Z",
+    "updatedAt": "2026-10-02T09:06:00Z",
+    "products": ["Synthetic Power Platform"],
+    "categories": ["automation", "service"],
+    "severity": null,
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "power-platform-clearly-non-applicable"
+    }
+  },
+  "coverageTags": [
+    "power-platform",
+    "clearly-non-applicable",
+    "confirmed-absence"
+  ]
+}

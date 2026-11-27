@@ -1,0 +1,145 @@
+{
+  "policyId": "m365-high-impact-guardrails",
+  "policyRulesVersion": "policy-2026-08",
+  "description": "LLM-independent floors for high-impact Microsoft 365 changes.",
+  "unknownHandling": "REVIEW_REQUIRED",
+  "rules": [
+    {
+      "ruleId": "major-change",
+      "enabled": true,
+      "description": "Major changes require human review.",
+      "condition": {
+        "kind": "boolean_signal",
+        "signal": "isMajorChange",
+        "equals": true
+      },
+      "effect": {
+        "stateFloor": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "admin-action-deadline",
+      "enabled": true,
+      "description": "An administrator action deadline requires action planning.",
+      "condition": {
+        "kind": "admin_action_deadline_present"
+      },
+      "effect": {
+        "stateFloor": "ACTION_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "high-or-critical-severity",
+      "enabled": true,
+      "description": "High and critical changes require human review.",
+      "condition": {
+        "kind": "severity_at_least",
+        "level": "high"
+      },
+      "effect": {
+        "stateFloor": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "admin-impact-and-severity",
+      "enabled": true,
+      "description": "An administrative high-severity change requires action planning.",
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "kind": "boolean_signal",
+            "signal": "hasAdminImpact",
+            "equals": true
+          },
+          {
+            "kind": "severity_at_least",
+            "level": "high"
+          }
+        ]
+      },
+      "effect": {
+        "stateFloor": "ACTION_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "retirement-or-deprecation",
+      "enabled": true,
+      "description": "Retirement and deprecation signals require review.",
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "kind": "boolean_signal",
+            "signal": "isRetirementOrDeprecation",
+            "equals": true
+          },
+          {
+            "kind": "normalized_tag",
+            "tag": "retirement"
+          },
+          {
+            "kind": "normalized_tag",
+            "tag": "deprecation"
+          }
+        ]
+      },
+      "effect": {
+        "stateFloor": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "security-impact",
+      "enabled": true,
+      "description": "Security-impact signals require action planning.",
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "kind": "boolean_signal",
+            "signal": "hasSecurityImpact",
+            "equals": true
+          },
+          {
+            "kind": "normalized_tag",
+            "tag": "security"
+          }
+        ]
+      },
+      "effect": {
+        "stateFloor": "ACTION_REQUIRED"
+      }
+    },
+    {
+      "ruleId": "privacy-or-compliance-impact",
+      "enabled": true,
+      "description": "Privacy and compliance signals require human review.",
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "kind": "boolean_signal",
+            "signal": "hasPrivacyImpact",
+            "equals": true
+          },
+          {
+            "kind": "boolean_signal",
+            "signal": "hasComplianceImpact",
+            "equals": true
+          },
+          {
+            "kind": "normalized_tag",
+            "tag": "privacy"
+          },
+          {
+            "kind": "normalized_tag",
+            "tag": "compliance"
+          }
+        ]
+      },
+      "effect": {
+        "stateFloor": "REVIEW_REQUIRED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "fixtureId": "SYNTH-TENANT-006",
+  "synthetic": true,
+  "profile": {
+    "schemaVersion": "1.0",
+    "profileVersion": "synthetic-profile-006",
+    "organization": { "employees": 1200 },
+    "services": {
+      "microsoft_365": true,
+      "teams": true,
+      "exchange_online": true,
+      "sharepoint_online": true,
+      "intune": true,
+      "entra_id": true,
+      "defender_for_endpoint": true,
+      "purview_compliance": true,
+      "power_platform": true,
+      "viva": true,
+      "stream": true
+    },
+    "environment": {
+      "windows": true,
+      "macos": true,
+      "ios": true,
+      "android": true
+    },
+    "capabilities": {
+      "conditional_access": true,
+      "autopilot": true,
+      "passwordless": true,
+      "byod": false,
+      "retention_labels": true
+    },
+    "ownership": {
+      "teams": "synthetic-collaboration-team",
+      "exchange_online": "synthetic-messaging-team",
+      "intune": "synthetic-endpoint-team",
+      "entra_id": "synthetic-identity-team",
+      "defender_for_endpoint": "synthetic-security-team",
+      "purview_compliance": "synthetic-compliance-team",
+      "power_platform": "synthetic-automation-team",
+      "viva": "synthetic-employee-experience-team"
+    },
+    "changePolicy": {
+      "userImpactRequiresCommunication": true,
+      "securityChangesRequireReview": true,
+      "complianceChangesRequireReview": true
+    },
+    "maintenance": {
+      "allowedDays": ["wednesday", "saturday"],
+      "timezone": "America/Los_Angeles"
+    }
+  },
+  "coverageTags": [
+    "tenant-variation",
+    "ownership",
+    "maintenance-window",
+    "endpoint-difference"
+  ]
+}

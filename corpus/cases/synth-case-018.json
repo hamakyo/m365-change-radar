@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-018",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-013",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The Teams retirement needs endpoint inventory and a migration owner before the legacy path disappears."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["retirement", "teams", "endpoint-difference"],
+  "evaluationTags": ["phase-1b", "retirement", "review"]
+}

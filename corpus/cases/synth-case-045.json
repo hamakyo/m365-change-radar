@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-045",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-040",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The maker wording update is low risk, with a known owner to communicate only if the small tenant needs it."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["power-platform", "user-communication", "ownership"],
+  "evaluationTags": ["phase-1b", "informational", "frontline-tenant"]
+}

@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-009",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-009",
+    "title": "Synthetic Stream workspace notice",
+    "body": "Synthetic scenario only: a workspace change targets a service disabled in one tenant profile.",
+    "publishedAt": "2026-08-09T09:00:00Z",
+    "updatedAt": "2026-08-09T09:25:00Z",
+    "products": ["Synthetic Stream"],
+    "categories": ["service"],
+    "severity": null,
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "clearly-non-applicable-for-disabled-service"
+    }
+  },
+  "coverageTags": ["clearly-non-applicable", "confirmed-absence"]
+}

@@ -1,0 +1,35 @@
+{
+  "fixtureId": "SYNTH-MC-041",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-041",
+    "title": "Synthetic Power Platform connector platform note",
+    "body": "Synthetic scenario only: a connector behavior differs between browser and mobile clients and needs platform-specific review.",
+    "publishedAt": "2026-10-01T09:00:00Z",
+    "updatedAt": "2026-10-01T09:12:00Z",
+    "products": ["Synthetic Power Platform"],
+    "categories": ["automation", "platform-difference"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "power-platform-platform-difference"
+    }
+  },
+  "coverageTags": [
+    "power-platform",
+    "platform-difference",
+    "endpoint-difference"
+  ]
+}

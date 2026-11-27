@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-025",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-020",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The critical OneDrive retention change needs compliance-owner review in this regulated profile."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": [
+    "compliance",
+    "critical-severity",
+    "sharepoint-onedrive",
+    "ownership"
+  ],
+  "evaluationTags": ["phase-1b", "compliance", "review"]
+}

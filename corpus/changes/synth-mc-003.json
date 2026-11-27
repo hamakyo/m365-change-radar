@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-003",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-003",
+    "title": "Synthetic SharePoint legacy endpoint retirement",
+    "body": "Synthetic scenario only: a legacy endpoint is planned for retirement.",
+    "publishedAt": "2026-08-03T09:00:00Z",
+    "updatedAt": "2026-08-03T09:15:00Z",
+    "products": ["Synthetic SharePoint"],
+    "categories": ["platform-lifecycle"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": true,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["retirement"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "retirement"
+    }
+  },
+  "coverageTags": ["retirement"]
+}

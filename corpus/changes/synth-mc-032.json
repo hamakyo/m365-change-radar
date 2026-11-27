@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-032",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-032",
+    "title": "Synthetic Defender alert retention change",
+    "body": "Synthetic scenario only: a Defender alert retention behavior changes and requires a privacy owner to review the effect.",
+    "publishedAt": "2026-09-22T09:00:00Z",
+    "updatedAt": "2026-09-22T09:16:00Z",
+    "products": ["Synthetic Defender for Endpoint"],
+    "categories": ["security", "privacy"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": true,
+      "hasComplianceImpact": false,
+      "tags": ["security", "privacy"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "defender-privacy"
+    }
+  },
+  "coverageTags": ["privacy", "high-severity", "defender-security", "ownership"]
+}

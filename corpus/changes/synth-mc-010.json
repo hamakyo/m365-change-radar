@@ -1,0 +1,20 @@
+{
+  "fixtureId": "SYNTH-MC-010",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-010",
+    "title": "Synthetic workload ownership clarification",
+    "body": "Synthetic scenario only: the affected workload is intentionally left unspecified for context testing.",
+    "publishedAt": "2026-08-10T09:00:00Z",
+    "updatedAt": "2026-08-10T09:10:00Z",
+    "products": ["Synthetic Workload"],
+    "categories": ["needs-context"],
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "unknown-signal"
+    }
+  },
+  "coverageTags": ["unknown-signal", "unknown-tenant-context"]
+}

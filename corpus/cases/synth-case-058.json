@@ -1,0 +1,23 @@
+{
+  "caseId": "SYNTH-CASE-058",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-022",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The large profile explicitly enables SharePoint Online, but the template notice carries no high-impact signal."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "sharepoint-onedrive",
+    "informational",
+    "tenant-variation",
+    "confirmed-absence"
+  ],
+  "evaluationTags": [
+    "phase-1b",
+    "same-change-different-tenant",
+    "informational"
+  ]
+}

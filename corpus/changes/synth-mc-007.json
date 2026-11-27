@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-007",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-007",
+    "title": "Synthetic retention label compliance update",
+    "body": "Synthetic scenario only: a retention label behavior is planned to change.",
+    "publishedAt": "2026-08-07T09:00:00Z",
+    "updatedAt": "2026-08-07T09:05:00Z",
+    "products": ["Synthetic Purview"],
+    "categories": ["compliance"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": true,
+      "tags": ["compliance"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "compliance"
+    }
+  },
+  "coverageTags": ["compliance", "high-severity"]
+}

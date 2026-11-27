@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-020",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-020",
+    "title": "Synthetic OneDrive retention label behavior",
+    "body": "Synthetic scenario only: a OneDrive retention label behavior changes and requires compliance owner review.",
+    "publishedAt": "2026-09-10T09:00:00Z",
+    "updatedAt": "2026-09-10T09:14:00Z",
+    "products": ["Synthetic OneDrive"],
+    "categories": ["content", "compliance"],
+    "severity": "critical",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": true,
+      "tags": ["compliance"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "onedrive-compliance"
+    }
+  },
+  "coverageTags": [
+    "compliance",
+    "critical-severity",
+    "sharepoint-onedrive",
+    "ownership"
+  ]
+}

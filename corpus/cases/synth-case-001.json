@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-001",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-001",
+  "tenantProfileFixtureId": "SYNTH-TENANT-001",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The synthetic change is explicitly marked major for this tenant."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["major-change", "high-severity", "admin-impact"],
+  "evaluationTags": ["seed", "guardrail", "applicable"]
+}

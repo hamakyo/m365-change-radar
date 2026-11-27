@@ -1,0 +1,35 @@
+{
+  "fixtureId": "SYNTH-MC-047",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-047",
+    "title": "Synthetic Microsoft 365 client availability note",
+    "body": "Synthetic scenario only: an experience is available on Windows and web but differs on mobile endpoints, requiring platform comparison.",
+    "publishedAt": "2026-10-07T09:00:00Z",
+    "updatedAt": "2026-10-07T09:13:00Z",
+    "products": ["Synthetic Microsoft 365"],
+    "categories": ["platform", "endpoint-management"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "microsoft-365-platform-difference"
+    }
+  },
+  "coverageTags": [
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ]
+}

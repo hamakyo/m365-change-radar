@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-026",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-021",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The SharePoint sync note describes platform differences without a normalized high-impact signal."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "sharepoint-onedrive",
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "platform-difference"]
+}

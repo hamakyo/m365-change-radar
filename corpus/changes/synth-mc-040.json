@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-040",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-040",
+    "title": "Synthetic Power Platform maker notice",
+    "body": "Synthetic scenario only: a maker-facing wording update may require an owner to communicate the change to a small user group.",
+    "publishedAt": "2026-09-30T09:00:00Z",
+    "updatedAt": "2026-09-30T09:09:00Z",
+    "products": ["Synthetic Power Platform"],
+    "categories": ["automation", "user-experience"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "power-platform-user-communication"
+    }
+  },
+  "coverageTags": ["power-platform", "user-communication", "ownership"]
+}

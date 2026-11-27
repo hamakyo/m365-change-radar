@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-028",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-023",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The Intune compliance action affects the tenant's managed endpoint fleet and has an explicit owner."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "admin-impact",
+    "high-severity",
+    "intune",
+    "endpoint-difference"
+  ],
+  "evaluationTags": ["phase-1b", "admin-impact", "action"]
+}

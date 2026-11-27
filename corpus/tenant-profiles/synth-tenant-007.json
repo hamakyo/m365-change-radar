@@ -1,0 +1,47 @@
+{
+  "fixtureId": "SYNTH-TENANT-007",
+  "synthetic": true,
+  "profile": {
+    "schemaVersion": "1.0",
+    "profileVersion": "synthetic-profile-007",
+    "organization": { "employees": 18 },
+    "services": {
+      "microsoft_365": true,
+      "teams": true,
+      "exchange_online": true,
+      "sharepoint_online": true,
+      "intune": false,
+      "entra_id": true,
+      "defender_for_endpoint": false,
+      "power_platform": true,
+      "viva": true
+    },
+    "environment": {
+      "windows": false,
+      "macos": false,
+      "ios": true,
+      "android": true
+    },
+    "capabilities": {
+      "conditional_access": false,
+      "autopilot": false,
+      "passwordless": false,
+      "byod": true
+    },
+    "ownership": {
+      "teams": "synthetic-frontline-owner",
+      "power_platform": "synthetic-automation-owner"
+    },
+    "changePolicy": {
+      "userImpactRequiresCommunication": true,
+      "securityChangesRequireReview": false,
+      "complianceChangesRequireReview": false
+    },
+    "maintenance": { "allowedDays": ["monday"], "timezone": "UTC" }
+  },
+  "coverageTags": [
+    "tenant-variation",
+    "confirmed-absence",
+    "platform-difference"
+  ]
+}

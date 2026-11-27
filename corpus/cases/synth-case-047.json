@@ -1,0 +1,18 @@
+{
+  "caseId": "SYNTH-CASE-047",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-042",
+  "tenantProfileFixtureId": "SYNTH-TENANT-010",
+  "expected": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The legacy profile explicitly disables Power Platform, so the feature notice does not apply."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "power-platform",
+    "clearly-non-applicable",
+    "confirmed-absence"
+  ],
+  "evaluationTags": ["phase-1b", "non-applicable", "known-absence"]
+}

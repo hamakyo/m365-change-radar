@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-064",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-024",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "INSUFFICIENT_CONTEXT",
+    "reason": "The Intune source signals are confirmed low risk, but the profile does not declare Intune usage; the product-level mapping relies on the Intune service alone.",
+    "missingContext": ["services.intune"]
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": ["intune", "unknown-tenant-context", "tenant-variation"],
+  "evaluationTags": [
+    "phase-1b-follow-up",
+    "insufficient-context",
+    "tenant-only-gap"
+  ]
+}

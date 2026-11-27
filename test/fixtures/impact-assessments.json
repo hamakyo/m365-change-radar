@@ -1,0 +1,27 @@
+[
+  {
+    "state": "ACTION_REQUIRED",
+    "reason": "An administrator must update a policy before the deadline.",
+    "evidence": ["admin-action-deadline"]
+  },
+  {
+    "state": "REVIEW_REQUIRED",
+    "reason": "The change may affect a configured service.",
+    "evidence": ["affected-service:teams"]
+  },
+  {
+    "state": "INFORMATIONAL",
+    "reason": "The change has no known operational action.",
+    "evidence": ["source-category:announcement"]
+  },
+  {
+    "state": "NOT_APPLICABLE",
+    "reason": "The tenant does not use the affected service.",
+    "evidence": ["tenant.services.exchange_online=false"]
+  },
+  {
+    "state": "INSUFFICIENT_CONTEXT",
+    "reason": "The tenant profile does not declare the affected service or owner.",
+    "missingContext": ["services.exchange_online", "ownership.exchange_online"]
+  }
+]

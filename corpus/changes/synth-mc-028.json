@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-028",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-028",
+    "title": "Synthetic Entra conditional access policy rollout",
+    "body": "Synthetic scenario only: a conditional access policy rollout is marked major and requires communication to administrators and users.",
+    "publishedAt": "2026-09-18T09:00:00Z",
+    "updatedAt": "2026-09-18T09:24:00Z",
+    "products": ["Synthetic Entra ID"],
+    "categories": ["identity", "security", "rollout"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": true,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact", "security"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "entra-major-policy"
+    }
+  },
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "entra-id",
+    "user-communication"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "caseId": "SYNTH-CASE-057",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-012",
+  "tenantProfileFixtureId": "SYNTH-TENANT-010",
+  "expected": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The legacy profile explicitly disables Teams, so the Teams wording update does not apply."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "teams",
+    "clearly-non-applicable",
+    "confirmed-absence",
+    "tenant-variation"
+  ],
+  "evaluationTags": [
+    "phase-1b",
+    "same-change-different-tenant",
+    "non-applicable"
+  ]
+}

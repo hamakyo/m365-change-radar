@@ -1,0 +1,7 @@
+node_modules/
+coverage/
+dist/
+artifacts/
+.env.local
+.corpus-dist-*
+.DS_Store

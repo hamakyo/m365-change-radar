@@ -1,0 +1,26 @@
+{
+  "fixtureId": "SYNTH-MC-038",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-038",
+    "title": "Synthetic Purview workload scope note",
+    "body": "Synthetic scenario only: a Purview workload is named, but the notice does not say whether the tenant has that workload enabled.",
+    "publishedAt": "2026-09-28T09:00:00Z",
+    "updatedAt": "2026-09-28T09:10:00Z",
+    "products": ["Synthetic Purview Compliance"],
+    "categories": ["information-governance", "needs-context"],
+    "severity": null,
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "purview-ambiguous-workload"
+    }
+  },
+  "coverageTags": [
+    "purview-compliance",
+    "ambiguous-scope",
+    "unknown-tenant-context",
+    "unknown-signal"
+  ]
+}

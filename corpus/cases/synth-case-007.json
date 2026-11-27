@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-007",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-003",
+  "tenantProfileFixtureId": "SYNTH-TENANT-001",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "A planned retirement needs review by the configured service owner."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["retirement"],
+  "evaluationTags": ["seed", "lifecycle"]
+}

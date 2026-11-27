@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-006",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-006",
+    "title": "Synthetic audit export privacy change",
+    "body": "Synthetic scenario only: an audit export includes a planned privacy-related field change.",
+    "publishedAt": "2026-08-06T09:00:00Z",
+    "updatedAt": "2026-08-06T09:45:00Z",
+    "products": ["Synthetic Purview"],
+    "categories": ["privacy"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": true,
+      "hasComplianceImpact": false,
+      "tags": ["privacy"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "privacy"
+    }
+  },
+  "coverageTags": ["privacy", "high-severity"]
+}

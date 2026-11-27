@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-031",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-031",
+    "title": "Synthetic Defender endpoint protection update",
+    "body": "Synthetic scenario only: a Defender endpoint protection behavior changes and requires security-owner action.",
+    "publishedAt": "2026-09-21T09:00:00Z",
+    "updatedAt": "2026-09-21T09:18:00Z",
+    "products": ["Synthetic Defender for Endpoint"],
+    "categories": ["security", "endpoint-management"],
+    "severity": "critical",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact", "security"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "defender-security"
+    }
+  },
+  "coverageTags": [
+    "security",
+    "critical-severity",
+    "defender-security",
+    "endpoint-difference"
+  ]
+}

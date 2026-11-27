@@ -1,0 +1,26 @@
+{
+  "caseId": "SYNTH-CASE-056",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-011",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The same major Teams rollout remains reviewable for the macOS and BYOD profile, with platform communication still required."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "teams",
+    "tenant-variation",
+    "platform-difference"
+  ],
+  "evaluationTags": [
+    "phase-1b",
+    "same-change-different-tenant",
+    "review",
+    "platform-difference"
+  ]
+}

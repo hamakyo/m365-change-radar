@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-031",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-026",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The Intune autopilot deprecation needs a managed migration plan that fits the regulated maintenance window."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "deprecation",
+    "high-severity",
+    "intune",
+    "maintenance-window"
+  ],
+  "evaluationTags": ["phase-1b", "deprecation", "review", "maintenance"]
+}

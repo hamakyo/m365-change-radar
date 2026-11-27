@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-044",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-044",
+    "title": "Synthetic Viva digest layout update",
+    "body": "Synthetic scenario only: a Viva digest layout update is announced and may need a maintenance-window communication.",
+    "publishedAt": "2026-10-04T09:00:00Z",
+    "updatedAt": "2026-10-04T09:08:00Z",
+    "products": ["Synthetic Viva"],
+    "categories": ["employee-experience", "user-experience"],
+    "severity": "low",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "viva-user-communication"
+    }
+  },
+  "coverageTags": ["viva", "user-communication", "maintenance-window"]
+}

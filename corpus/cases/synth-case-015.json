@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-015",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-010",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The source leaves the affected workload signal unknown, so the safe policy requires human review."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": ["unknown-tenant-context", "unknown-signal"],
+  "evaluationTags": ["seed", "insufficient-context", "missing-owner"]
+}

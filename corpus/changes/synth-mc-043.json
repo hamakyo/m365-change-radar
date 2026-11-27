@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-043",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-043",
+    "title": "Synthetic Viva insights module retirement",
+    "body": "Synthetic scenario only: a Viva insights module is planned for retirement and requires review of user communications.",
+    "publishedAt": "2026-10-03T09:00:00Z",
+    "updatedAt": "2026-10-03T09:18:00Z",
+    "products": ["Synthetic Viva"],
+    "categories": ["employee-experience", "platform-lifecycle"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": true,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["retirement"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "viva-retirement"
+    }
+  },
+  "coverageTags": ["retirement", "high-severity", "viva", "user-communication"]
+}

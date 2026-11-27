@@ -1,0 +1,21 @@
+{
+  "fixtureId": "SYNTH-TENANT-002",
+  "synthetic": true,
+  "profile": {
+    "schemaVersion": "1.0",
+    "profileVersion": "synthetic-profile-002",
+    "organization": { "employees": 35 },
+    "services": {
+      "microsoft_365": true,
+      "teams": true,
+      "exchange_online": false,
+      "stream": false
+    },
+    "environment": { "windows": true, "macos": false },
+    "capabilities": { "conditional_access": false, "byod": false },
+    "ownership": { "teams": "synthetic-collaboration-team" },
+    "changePolicy": { "userImpactRequiresCommunication": true },
+    "maintenance": { "allowedDays": ["friday"], "timezone": "UTC" }
+  },
+  "coverageTags": ["confirmed-absence", "tenant-variation"]
+}

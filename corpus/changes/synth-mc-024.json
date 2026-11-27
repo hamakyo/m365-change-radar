@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-024",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-024",
+    "title": "Synthetic Intune enrollment platform note",
+    "body": "Synthetic scenario only: enrollment prompts differ between Windows and macOS endpoints and may require user guidance.",
+    "publishedAt": "2026-09-14T09:00:00Z",
+    "updatedAt": "2026-09-14T09:17:00Z",
+    "products": ["Synthetic Intune"],
+    "categories": ["endpoint-management", "platform-difference"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "intune-endpoint-difference"
+    }
+  },
+  "coverageTags": [
+    "intune",
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ]
+}

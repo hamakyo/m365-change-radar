@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-005",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-005",
+  "tenantProfileFixtureId": "SYNTH-TENANT-005",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "Critical security impact requires an operational response."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": ["security", "critical-severity"],
+  "evaluationTags": ["seed", "security", "action"]
+}

@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-005",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-005",
+    "title": "Synthetic conditional access behavior update",
+    "body": "Synthetic scenario only: a sign-in control behavior is planned to change.",
+    "publishedAt": "2026-08-05T09:00:00Z",
+    "updatedAt": "2026-08-05T09:10:00Z",
+    "products": ["Synthetic Entra"],
+    "categories": ["security"],
+    "severity": "critical",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": true,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["security", "admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "security"
+    }
+  },
+  "coverageTags": ["security", "critical-severity"]
+}

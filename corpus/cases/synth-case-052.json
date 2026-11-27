@@ -1,0 +1,18 @@
+{
+  "caseId": "SYNTH-CASE-052",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-047",
+  "tenantProfileFixtureId": "SYNTH-TENANT-009",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Microsoft 365 client note is a platform comparison item without a normalized high-impact signal."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "platform-difference",
+    "endpoint-difference",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "platform-difference"]
+}

@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-049",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-044",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Viva digest layout update is low risk for this mobile-first tenant and has no normalized impact signal."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["viva", "user-communication", "maintenance-window"],
+  "evaluationTags": ["phase-1b", "informational", "mobile-first"]
+}

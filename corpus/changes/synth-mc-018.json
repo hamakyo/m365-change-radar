@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-018",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-018",
+    "title": "Synthetic Exchange legacy protocol deprecation",
+    "body": "Synthetic scenario only: a legacy Exchange protocol path is planned for deprecation and needs migration review across platforms.",
+    "publishedAt": "2026-09-08T09:00:00Z",
+    "updatedAt": "2026-09-08T09:22:00Z",
+    "products": ["Synthetic Exchange Online"],
+    "categories": ["messaging", "platform-lifecycle"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": true,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["deprecation"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "exchange-protocol-deprecation"
+    }
+  },
+  "coverageTags": [
+    "deprecation",
+    "high-severity",
+    "exchange-online",
+    "platform-difference"
+  ]
+}

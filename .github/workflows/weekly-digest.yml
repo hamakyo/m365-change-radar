@@ -1,0 +1,71 @@
+name: Weekly M365 Change Digest
+
+on:
+  schedule:
+    # Monday 21:00 UTC = Tuesday 06:00 JST
+    - cron: '0 21 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Rolling lookback window in days'
+        required: false
+        default: '7'
+        type: string
+      limit:
+        description: 'Maximum changes to analyze'
+        required: false
+        default: '50'
+        type: string
+      profiles:
+        description: 'Tenant profile directory or comma-separated paths'
+        required: false
+        default: 'profiles'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.15.4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate provider-free Microsoft 365 Roadmap digest
+        env:
+          DIGEST_DAYS: ${{ inputs.days || '7' }}
+          DIGEST_LIMIT: ${{ inputs.limit || '50' }}
+          DIGEST_PROFILES: ${{ inputs.profiles || 'profiles' }}
+        run: |
+          pnpm --silent digest \
+            --live \
+            --days "${DIGEST_DAYS}" \
+            --limit "${DIGEST_LIMIT}" \
+            --profiles "${DIGEST_PROFILES}" \
+            --out-dir artifacts/weekly-digest
+
+      - name: Upload digest bundle, audit ledger, and Zenn article draft
+        uses: actions/upload-artifact@v4
+        with:
+          name: m365-weekly-digest
+          path: |
+            artifacts/weekly-digest/digest-bundle.json
+            artifacts/weekly-digest/digest-ja.md
+            artifacts/weekly-digest/zenn-article-ja.md
+          if-no-files-found: error
+          retention-days: 30

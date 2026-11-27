@@ -1,0 +1,21 @@
+{
+  "caseId": "SYNTH-CASE-016",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-011",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The major Teams rollout needs an owned implementation and user communication plan."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "admin-impact",
+    "teams",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "major", "action", "large-hybrid-tenant"]
+}

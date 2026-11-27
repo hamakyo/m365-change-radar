@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-022",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-017",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "Conflicting Exchange scope signals are source-unknown, so the safe policy requires human review."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "exchange-online",
+    "contradictory-source-signals",
+    "ambiguous-scope",
+    "unknown-signal"
+  ],
+  "evaluationTags": ["phase-1b", "insufficient-context", "contradictory"]
+}

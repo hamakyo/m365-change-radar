@@ -1,0 +1,59 @@
+{
+  "analysisId": "analysis-2026-08-26-002",
+  "tenantId": "tenant-demo",
+  "createdAt": "2026-08-26T12:05:00+09:00",
+  "changeEventRef": {
+    "source": "microsoft-message-center",
+    "externalId": "MC987654",
+    "sourceMessageVersion": "message-v1"
+  },
+  "versionBundle": {
+    "sourceMessageVersion": "message-v1",
+    "tenantProfileVersion": "profile-2026-08-26.1",
+    "policyVersions": {
+      "riskPolicyRulesVersion": "policy-2026-08",
+      "tenantApplicabilityPolicyRulesVersion": "tenant-applicability-2026-08"
+    },
+    "ai": {
+      "used": false
+    }
+  },
+  "impactAssessment": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The tenant does not use the affected service.",
+    "evidence": ["rule.no-impact"]
+  },
+  "provenanceRecords": [
+    {
+      "kind": "source_fact",
+      "evidenceId": "source.no-impact",
+      "source": "microsoft-message-center",
+      "externalId": "MC987654",
+      "sourceMessageVersion": "message-v1",
+      "path": "/products/0",
+      "observation": {
+        "presence": "present",
+        "value": "Microsoft Stream"
+      }
+    },
+    {
+      "kind": "tenant_fact",
+      "evidenceId": "tenant.services.stream",
+      "tenantProfileVersion": "profile-2026-08-26.1",
+      "path": "/services/stream",
+      "observation": {
+        "presence": "present",
+        "value": false
+      }
+    },
+    {
+      "kind": "deterministic_conclusion",
+      "evidenceId": "rule.no-impact",
+      "policyKind": "tenant_applicability_policy",
+      "policyRulesVersion": "tenant-applicability-2026-08",
+      "ruleId": "service-not-enabled",
+      "conclusion": "The change is not applicable to this tenant.",
+      "dependsOnEvidenceIds": ["source.no-impact", "tenant.services.stream"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "caseId": "SYNTH-CASE-009",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-006",
+  "tenantProfileFixtureId": "SYNTH-TENANT-005",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "A privacy-impact signal requires review by the regulated tenant context."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": ["privacy", "high-severity"],
+  "evaluationTags": ["seed", "privacy", "regulated-context"]
+}

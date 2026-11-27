@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-035",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-030",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Entra article is informational and explicitly carries no normalized security or administrative signal."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["entra-id", "informational", "confirmed-absence"],
+  "evaluationTags": ["phase-1b", "informational", "known-absence"]
+}

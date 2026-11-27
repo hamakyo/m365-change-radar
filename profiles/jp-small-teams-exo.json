@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "profileVersion": "jp-small-teams-exo-2026-11.2",
+  "organization": {
+    "employees": 40
+  },
+  "services": {
+    "microsoft_365": true,
+    "exchange_online": true,
+    "teams": true,
+    "entra_id": true,
+    "sharepoint_online": false,
+    "intune": false,
+    "defender_for_endpoint": false,
+    "defender_for_office_365": false,
+    "viva": false,
+    "m365_copilot": false,
+    "windows_365": false,
+    "dynamics_365": false
+  },
+  "environment": {
+    "cloud_worldwide_multi_tenant": true,
+    "cloud_gcc": false,
+    "cloud_gcc_high": false,
+    "cloud_dod": false,
+    "cloud_china_21vianet": false,
+    "windows": true,
+    "macos": true
+  },
+  "capabilities": {
+    "conditional_access": false,
+    "autopilot": false,
+    "passwordless": false,
+    "byod": true
+  },
+  "ownership": {
+    "exchange_online": "it-generalist",
+    "teams": "it-generalist"
+  },
+  "changePolicy": {
+    "userImpactRequiresCommunication": true,
+    "securityChangesRequireReview": true,
+    "complianceChangesRequireReview": false,
+    "adminImpactRequiresReview": true
+  },
+  "maintenance": {
+    "allowedDays": ["sunday"],
+    "timezone": "Asia/Tokyo"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "caseId": "SYNTH-CASE-059",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-041",
+  "tenantProfileFixtureId": "SYNTH-TENANT-010",
+  "expected": {
+    "state": "NOT_APPLICABLE",
+    "reason": "The legacy profile explicitly disables Power Platform, so its connector platform note does not apply."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "power-platform",
+    "clearly-non-applicable",
+    "confirmed-absence",
+    "tenant-variation"
+  ],
+  "evaluationTags": [
+    "phase-1b",
+    "same-change-different-tenant",
+    "non-applicable"
+  ]
+}

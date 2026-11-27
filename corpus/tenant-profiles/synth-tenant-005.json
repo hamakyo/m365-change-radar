@@ -1,0 +1,40 @@
+{
+  "fixtureId": "SYNTH-TENANT-005",
+  "synthetic": true,
+  "profile": {
+    "schemaVersion": "1.0",
+    "profileVersion": "synthetic-profile-005",
+    "organization": { "employees": 250 },
+    "services": {
+      "microsoft_365": true,
+      "entra_id": true,
+      "sharepoint_online": true,
+      "synthetic_purview": true
+    },
+    "environment": {
+      "windows": true,
+      "macos": true,
+      "ios": true,
+      "android": true
+    },
+    "capabilities": {
+      "conditional_access": true,
+      "passwordless": true,
+      "retention_labels": true
+    },
+    "ownership": {
+      "synthetic_purview": "synthetic-compliance-team",
+      "entra_id": "synthetic-security-team"
+    },
+    "changePolicy": {
+      "userImpactRequiresCommunication": true,
+      "securityChangesRequireReview": true,
+      "complianceChangesRequireReview": true
+    },
+    "maintenance": {
+      "allowedDays": ["saturday", "sunday"],
+      "timezone": "Europe/London"
+    }
+  },
+  "coverageTags": ["security", "privacy", "compliance"]
+}

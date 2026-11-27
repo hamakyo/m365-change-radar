@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-039",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-039",
+    "title": "Synthetic Power Platform environment rollout",
+    "body": "Synthetic scenario only: a Power Platform environment rollout is marked major and needs coordinated communication.",
+    "publishedAt": "2026-09-29T09:00:00Z",
+    "updatedAt": "2026-09-29T09:20:00Z",
+    "products": ["Synthetic Power Platform"],
+    "categories": ["automation", "rollout"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": true,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "power-platform-major-rollout"
+    }
+  },
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "power-platform",
+    "user-communication"
+  ]
+}

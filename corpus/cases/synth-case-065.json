@@ -1,0 +1,23 @@
+{
+  "caseId": "SYNTH-CASE-065",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-040",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "INSUFFICIENT_CONTEXT",
+    "reason": "The Power Platform source signals are confirmed low risk, but the profile does not declare the service required by the matched policy rule.",
+    "missingContext": ["services.power_platform"]
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "power-platform",
+    "unknown-tenant-context",
+    "tenant-variation"
+  ],
+  "evaluationTags": [
+    "phase-1b-follow-up",
+    "insufficient-context",
+    "tenant-only-gap"
+  ]
+}

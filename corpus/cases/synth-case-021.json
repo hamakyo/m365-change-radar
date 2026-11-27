@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-021",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-016",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Exchange banner wording is low risk, with an identifiable messaging owner if communication is desired."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": ["exchange-online", "user-communication", "ownership"],
+  "evaluationTags": ["phase-1b", "informational", "owner-known"]
+}

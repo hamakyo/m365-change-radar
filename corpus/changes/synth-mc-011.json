@@ -1,0 +1,38 @@
+{
+  "fixtureId": "SYNTH-MC-011",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-011",
+    "title": "Synthetic Teams meeting policy rollout",
+    "body": "Synthetic scenario only: a tenant-wide Teams meeting policy rollout is planned and requires coordinated user communication.",
+    "publishedAt": "2026-09-01T09:00:00Z",
+    "updatedAt": "2026-09-01T09:20:00Z",
+    "products": ["Synthetic Teams"],
+    "categories": ["collaboration", "rollout"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": true,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": ["admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "teams-major-rollout"
+    }
+  },
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "admin-impact",
+    "teams",
+    "user-communication",
+    "platform-difference"
+  ]
+}

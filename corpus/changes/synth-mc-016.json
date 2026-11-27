@@ -1,0 +1,31 @@
+{
+  "fixtureId": "SYNTH-MC-016",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-016",
+    "title": "Synthetic Exchange mailbox banner wording",
+    "body": "Synthetic scenario only: a mailbox banner wording change is announced and may need a coordinated communication owner.",
+    "publishedAt": "2026-09-06T09:00:00Z",
+    "updatedAt": "2026-09-06T09:12:00Z",
+    "products": ["Synthetic Exchange Online"],
+    "categories": ["messaging", "user-experience"],
+    "severity": "medium",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": false,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": false,
+      "hasComplianceImpact": false,
+      "tags": []
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "exchange-user-communication"
+    }
+  },
+  "coverageTags": ["exchange-online", "user-communication", "ownership"]
+}

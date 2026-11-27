@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-044",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-039",
+  "tenantProfileFixtureId": "SYNTH-TENANT-006",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The major Power Platform rollout requires owner coordination and communication across the large tenant."
+  },
+  "importance": "high",
+  "highImpact": true,
+  "coverageTags": [
+    "major-change",
+    "high-severity",
+    "power-platform",
+    "user-communication"
+  ],
+  "evaluationTags": ["phase-1b", "major", "action", "automation"]
+}

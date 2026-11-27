@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-053",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-048",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "Contradictory rollout scope signals are source-unknown, so the safe policy requires human review."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "contradictory-source-signals",
+    "ambiguous-scope",
+    "unknown-signal"
+  ],
+  "evaluationTags": ["phase-1b", "insufficient-context", "contradictory"]
+}

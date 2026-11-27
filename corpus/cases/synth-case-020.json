@@ -1,0 +1,21 @@
+{
+  "caseId": "SYNTH-CASE-020",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-015",
+  "tenantProfileFixtureId": "SYNTH-TENANT-008",
+  "expected": {
+    "state": "ACTION_REQUIRED",
+    "minimumRiskFloor": "ACTION_REQUIRED",
+    "reason": "The Exchange deadline and critical severity require an owned configuration review before the due date."
+  },
+  "importance": "critical",
+  "highImpact": true,
+  "coverageTags": [
+    "admin-deadline",
+    "critical-severity",
+    "exchange-online",
+    "ownership",
+    "maintenance-window"
+  ],
+  "evaluationTags": ["phase-1b", "deadline", "action", "regulated-tenant"]
+}

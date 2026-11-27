@@ -1,0 +1,24 @@
+{
+  "fixtureId": "SYNTH-TENANT-004",
+  "synthetic": true,
+  "profile": {
+    "schemaVersion": "1.0",
+    "profileVersion": "synthetic-profile-004",
+    "organization": { "employees": 80 },
+    "services": {
+      "microsoft_365": true,
+      "teams": true,
+      "stream": false,
+      "synthetic_workload": false
+    },
+    "environment": { "windows": true, "ios": true },
+    "capabilities": { "conditional_access": true, "passwordless": false },
+    "ownership": { "teams": "synthetic-collaboration-team" },
+    "changePolicy": {
+      "userImpactRequiresCommunication": false,
+      "securityChangesRequireReview": true
+    },
+    "maintenance": { "allowedDays": ["sunday"], "timezone": "America/New_York" }
+  },
+  "coverageTags": ["clearly-non-applicable", "confirmed-absence"]
+}

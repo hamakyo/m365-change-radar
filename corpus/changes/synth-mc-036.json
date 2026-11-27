@@ -1,0 +1,36 @@
+{
+  "fixtureId": "SYNTH-MC-036",
+  "synthetic": true,
+  "event": {
+    "source": "synthetic-message-center",
+    "externalId": "SYNTH-MC-036",
+    "title": "Synthetic Purview audit privacy control",
+    "body": "Synthetic scenario only: a Purview audit privacy control changes and requires communication to affected administrators.",
+    "publishedAt": "2026-09-26T09:00:00Z",
+    "updatedAt": "2026-09-26T09:15:00Z",
+    "products": ["Synthetic Purview Compliance"],
+    "categories": ["privacy", "audit"],
+    "severity": "high",
+    "signals": {
+      "isMajorChange": false,
+      "actionRequiredBy": null,
+      "hasAdminImpact": true,
+      "isRetirementOrDeprecation": false,
+      "hasSecurityImpact": false,
+      "hasPrivacyImpact": true,
+      "hasComplianceImpact": true,
+      "tags": ["privacy", "compliance", "admin-impact"]
+    },
+    "sourceMetadata": {
+      "synthetic": true,
+      "fixtureKind": "message-center-style",
+      "scenario": "purview-privacy"
+    }
+  },
+  "coverageTags": [
+    "privacy",
+    "high-severity",
+    "purview-compliance",
+    "user-communication"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "caseId": "SYNTH-CASE-017",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-012",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The low-risk Teams wording change has no normalized impact signal, though the owner may communicate it."
+  },
+  "importance": "low",
+  "highImpact": false,
+  "coverageTags": [
+    "teams",
+    "user-communication",
+    "maintenance-window",
+    "confirmed-absence"
+  ],
+  "evaluationTags": ["phase-1b", "informational", "frontline-tenant"]
+}

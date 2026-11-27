@@ -1,0 +1,20 @@
+{
+  "caseId": "SYNTH-CASE-034",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-029",
+  "tenantProfileFixtureId": "SYNTH-TENANT-007",
+  "expected": {
+    "state": "REVIEW_REQUIRED",
+    "minimumRiskFloor": "REVIEW_REQUIRED",
+    "reason": "The Entra access package scope signal is unknown, so the safe policy requires review before ownership matching."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": [
+    "entra-id",
+    "ambiguous-scope",
+    "ownership",
+    "unknown-signal"
+  ],
+  "evaluationTags": ["phase-1b", "insufficient-context", "ambiguous"]
+}

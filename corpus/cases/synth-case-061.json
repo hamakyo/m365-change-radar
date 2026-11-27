@@ -1,0 +1,14 @@
+{
+  "caseId": "SYNTH-CASE-061",
+  "synthetic": true,
+  "changeFixtureId": "SYNTH-MC-012",
+  "tenantProfileFixtureId": "SYNTH-TENANT-003",
+  "expected": {
+    "state": "INFORMATIONAL",
+    "reason": "The Teams source signals are confirmed low risk and services.teams is true, so applicability is decidable; ownership is outside the Phase 1 applicability boundary and cannot make this insufficient context."
+  },
+  "importance": "medium",
+  "highImpact": false,
+  "coverageTags": ["teams", "unknown-tenant-context", "tenant-variation"],
+  "evaluationTags": ["phase-1b-follow-up", "informational", "tenant-variation"]
+}

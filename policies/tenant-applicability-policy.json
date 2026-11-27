@@ -1,0 +1,352 @@
+{
+  "policyId": "m365-tenant-applicability",
+  "policyRulesVersion": "tenant-applicability-2026-11.2",
+  "description": "Maps normalized Microsoft 365 workload and sovereign-cloud partition labels to inspectable tenant profile service and environment flags.",
+  "rules": [
+    {
+      "ruleId": "sovereign-cloud-gcc-applicable",
+      "enabled": true,
+      "description": "US Government GCC-only changes apply only when environment.cloud_gcc is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Cloud GCC"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "environment", "key": "cloud_gcc", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "sovereign-cloud-gcc-high-applicable",
+      "enabled": true,
+      "description": "US Government GCC High-only changes apply only when environment.cloud_gcc_high is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Cloud GCC High"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "environment", "key": "cloud_gcc_high", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "sovereign-cloud-dod-applicable",
+      "enabled": true,
+      "description": "US Department of Defense (DoD)-only changes apply only when environment.cloud_dod is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Cloud DoD"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "environment", "key": "cloud_dod", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "sovereign-cloud-china-applicable",
+      "enabled": true,
+      "description": "Microsoft Cloud operated by 21Vianet (China)-only changes apply only when environment.cloud_china_21vianet is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Cloud China (21Vianet)"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "environment",
+            "key": "cloud_china_21vianet",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "teams-applicable",
+      "enabled": true,
+      "description": "Microsoft Teams changes apply when services.teams is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Teams"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "teams", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "exchange-outlook-applicable",
+      "enabled": true,
+      "description": "Exchange Online and Outlook changes apply when services.exchange_online is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Exchange Online", "Outlook"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "exchange_online", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "sharepoint-onedrive-applicable",
+      "enabled": true,
+      "description": "SharePoint Online and OneDrive changes apply when services.sharepoint_online is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["SharePoint Online", "OneDrive"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "sharepoint_online", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "intune-applicable",
+      "enabled": true,
+      "description": "Microsoft Intune changes apply when services.intune is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Intune"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "intune", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "entra-id-applicable",
+      "enabled": true,
+      "description": "Microsoft Entra ID changes apply when services.entra_id is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Entra ID"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "entra_id", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "defender-for-office-365-applicable",
+      "enabled": true,
+      "description": "Microsoft Defender for Office 365 changes apply when services.defender_for_office_365 is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Defender for Office 365"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "defender_for_office_365",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "defender-suite-applicable",
+      "enabled": true,
+      "description": "Microsoft Defender suite changes apply when endpoint or Office 365 Defender protection is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Defender"]
+      },
+      "condition": {
+        "kind": "any_of",
+        "conditions": [
+          {
+            "section": "services",
+            "key": "defender_for_endpoint",
+            "equals": true
+          },
+          {
+            "section": "services",
+            "key": "defender_for_office_365",
+            "equals": true
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "purview-applicable",
+      "enabled": true,
+      "description": "Microsoft Purview changes apply when services.purview_compliance is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Purview"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "purview_compliance", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "power-platform-applicable",
+      "enabled": true,
+      "description": "Microsoft Power Platform changes apply when services.power_platform is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Power Platform"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "power_platform", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "viva-applicable",
+      "enabled": true,
+      "description": "Microsoft Viva changes apply when services.viva is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Viva"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [{ "section": "services", "key": "viva", "equals": true }]
+      }
+    },
+    {
+      "ruleId": "m365-copilot-applicable",
+      "enabled": true,
+      "description": "Microsoft 365 Copilot changes apply when services.m365_copilot is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft 365 Copilot"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "m365_copilot", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "microsoft-365-apps-applicable",
+      "enabled": true,
+      "description": "Microsoft 365 Apps client updates apply when services.microsoft_365_apps is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft 365 Apps"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "microsoft_365_apps", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "microsoft-365-core-applicable",
+      "enabled": true,
+      "description": "Core Microsoft 365 suite and admin center updates apply when services.microsoft_365 is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft 365"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "microsoft_365", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "stream-applicable",
+      "enabled": true,
+      "description": "Microsoft Stream updates apply when services.stream is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Stream"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "stream", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "edge-applicable",
+      "enabled": true,
+      "description": "Microsoft Edge enterprise updates apply when services.microsoft_edge is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Microsoft Edge"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "microsoft_edge", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "windows-client-applicable",
+      "enabled": true,
+      "description": "Windows client updates apply when environment.windows is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Windows"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "environment", "key": "windows", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "windows-365-applicable",
+      "enabled": true,
+      "description": "Windows 365 Cloud PC updates apply when services.windows_365 is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Windows 365"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "windows_365", "equals": true }
+        ]
+      }
+    },
+    {
+      "ruleId": "dynamics-365-applicable",
+      "enabled": true,
+      "description": "Dynamics 365 business application updates apply when services.dynamics_365 is enabled.",
+      "selector": {
+        "field": "products",
+        "values": ["Dynamics 365"]
+      },
+      "condition": {
+        "kind": "all_of",
+        "conditions": [
+          { "section": "services", "key": "dynamics_365", "equals": true }
+        ]
+      }
+    }
+  ]
+}

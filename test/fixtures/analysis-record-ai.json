@@ -1,0 +1,72 @@
+{
+  "analysisId": "analysis-2026-08-26-001",
+  "tenantId": "tenant-demo",
+  "createdAt": "2026-08-26T12:00:00Z",
+  "changeEventRef": {
+    "source": "microsoft-message-center",
+    "externalId": "MC123456",
+    "sourceMessageVersion": "message-v3"
+  },
+  "versionBundle": {
+    "sourceMessageVersion": "message-v3",
+    "tenantProfileVersion": "profile-2026-08-26.1",
+    "policyVersions": {
+      "riskPolicyRulesVersion": "policy-2026-08",
+      "tenantApplicabilityPolicyRulesVersion": "tenant-applicability-2026-08"
+    },
+    "ai": {
+      "used": true,
+      "promptVersion": "prompt-2026-08",
+      "model": "gpt-5.6-luna",
+      "modelVersion": "gpt-5.6-luna-2026-08-01"
+    }
+  },
+  "impactAssessment": {
+    "state": "REVIEW_REQUIRED",
+    "reason": "The change may affect the configured Teams environment.",
+    "evidence": ["rule.teams-review", "ai.impact-summary"]
+  },
+  "provenanceRecords": [
+    {
+      "kind": "source_fact",
+      "evidenceId": "source.deadline",
+      "source": "microsoft-message-center",
+      "externalId": "MC123456",
+      "sourceMessageVersion": "message-v3",
+      "path": "/actionRequiredByDateTime",
+      "observation": {
+        "presence": "present",
+        "value": "2026-10-01T00:00:00Z"
+      }
+    },
+    {
+      "kind": "tenant_fact",
+      "evidenceId": "tenant.services.teams",
+      "tenantProfileVersion": "profile-2026-08-26.1",
+      "path": "/services/teams",
+      "observation": {
+        "presence": "present",
+        "value": true
+      }
+    },
+    {
+      "kind": "deterministic_conclusion",
+      "evidenceId": "rule.teams-review",
+      "policyKind": "tenant_applicability_policy",
+      "policyRulesVersion": "tenant-applicability-2026-08",
+      "ruleId": "teams-service-review",
+      "conclusion": "Review is required because the tenant uses Teams.",
+      "dependsOnEvidenceIds": ["source.deadline", "tenant.services.teams"]
+    },
+    {
+      "kind": "ai_inference",
+      "evidenceId": "ai.impact-summary",
+      "promptVersion": "prompt-2026-08",
+      "model": "gpt-5.6-luna",
+      "modelVersion": "gpt-5.6-luna-2026-08-01",
+      "confidence": 0.82,
+      "inference": "Notify the Teams owner and review the policy before the deadline.",
+      "dependsOnEvidenceIds": ["rule.teams-review"]
+    }
+  ]
+}
